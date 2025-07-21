@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primary:#BFA6FF;
+    --secondary: #ffffff;
+    --theme-gradient:linear-gradient(180deg,var(--primary),var(--secondary));
+    --theme-gradient-right:linear-gradient(90deg,var(--primary),var(--secondary));
+    --theme-gradient-left:linear-gradient(90deg,var(--secondary),var(--primary));
+    --btn-primary:#6C5DD3;
+    --btn-secondary:#BFA6FF;
+    --download-section-primary:rgba(108, 93, 211, 0.1);
+    --downlaod-section-secondary:rgba(108, 93, 211, 0);
+    --download-section-gradient:linear-gradient(90deg, var(--download-section-primary), var(--downlaod-section-secondary));
+    --partner-us-primary:rgba(100, 116, 139, 0.1);
+    --download-section-gradient-reverse:linear-gradient(90deg, var(--downlaod-section-secondary), var(--partner-us-primary));
+    
+}
+
+body{
+    /* background-image: url('/react_001/src/assets/images/bg-image.png'); */
+    background:var(--theme-gradient);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    font-family: 'Lato',sans-serif;
+}
+.primary-btn {
+    background:linear-gradient(90deg, var(--btn-secondary), var(--btn-primary),var(--btn-primary));
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Lato',sans-serif;
+}
+.primary-btn:hover{
+    background: var(--btn-primary);
+}
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--btn-primary);
+    color:var(--btn-primary);
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Lato',sans-serif;
+}
+.secondary-btn:hover{
+    background: var(--btn-primary);
+    color: #ffffff;
+}
+.download-section {
+    background: var(--download-section-gradient);
+    /* min-height: 100vh; */
+}
+.partner-us {
+    background: var(--download-section-gradient-reverse);
+}
+
+@media (max-width: 640px) {
+  .primary-btn,
+  .secondary-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+.primary-color{
+    color: var(--btn-primary);
+}
+
+/* global.css or add to tailwind config via @apply */
+.form-input {
+  @apply w-full border-b border-gray-300 focus:outline-none focus:border-[#6C5DD3] text-sm px-2 py-2 bg-transparent;
+}
