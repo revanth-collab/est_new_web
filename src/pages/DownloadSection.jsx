@@ -48,7 +48,7 @@ import downloadImg from "../assets/images/Download.png";
 // import qrImg from "../assets/images/QrCode.png";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
-import userQR from "../assets/images/userQR.jpeg"
+import userQR from "../assets/images/UserQR.jpeg"
 
 const DownloadSection = () => {
   return (
