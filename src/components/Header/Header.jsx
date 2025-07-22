@@ -23,16 +23,17 @@ import img from "../../assets/images/est_logo.png";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 md:px-10 gap-4">
+    <div className="flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 md:px-10 gap-2">
       <img
         src={img}
         alt="logo"
         className="w-40 sm:w-52 md:w-[200px] h-auto p-1 px-2 rounded-md cursor-pointer"
         onClick={()=>navigate('/')}
       />
-      <div className="flex flex-wrap gap-3 sm:gap-5">
-        <button className="rounded-[20px] primary-btn outline-none"><a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Download</a></button>
-        <button className="rounded-[20px] secondary-btn outline-none" onClick={()=>navigate('/contact')}>Contact</button>
+      <div className="flex flex-wrap gap-2 sm:gap-5">
+        {/* <button className="rounded-[20px] primary-btn outline-none"><a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Download</a></button> */}
+        <button className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px]">Home</button>
+        <button className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px]" onClick={()=>navigate('/contact')}>Contact</button>
       </div>
     </div>
   );

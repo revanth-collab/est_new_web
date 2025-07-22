@@ -1,11 +1,14 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from './utils/AuthContext.jsx';
-import { ToastContainer } from "react-toastify";
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import Layout from './layout/Layout.jsx';
 import ErrorBoundary from './others/ErrorBoundary.jsx';
 import ErrorFallback from './others/ErrorFallback.jsx';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 // Lazy-loaded pages
 const Login = lazy(() => import('./pages/Login.jsx'));

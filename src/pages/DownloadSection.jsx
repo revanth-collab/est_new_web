@@ -45,9 +45,10 @@
 
 import React from 'react';
 import downloadImg from "../assets/images/Download.png";
-import qrImg from "../assets/images/QrCode.png";
+// import qrImg from "../assets/images/QrCode.png";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
+import userQR from "../assets/images/userQR.jpeg"
 
 const DownloadSection = () => {
   return (
@@ -71,7 +72,7 @@ const DownloadSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
 
-          <img src={qrImg} alt="qr_image" className="w-[120px]" />
+          <img src={userQR} alt="qr_image" className="w-[120px]" />
 
 
           <div className="flex flex-row sm:flex-col gap-2">

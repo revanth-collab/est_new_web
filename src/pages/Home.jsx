@@ -78,16 +78,19 @@ const Home = () => {
         Discover top-rated salons, spas & clinics. Book instantly.
       </p>
 
-      <button className='text-white font-semibold bg-[#6C5DD3] p-2 px-5 rounded-[20px] z-10'>
+      <button className='text-white font-semibold bg-[#6C5DD3] p-2 px-5 rounded-[20px] z-10 mb-3'>
         <a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Get the App</a>
       </button>
 
       <div className='relative w-100 flex justify-center items-center mt-10 gap-0'>
-        <h1 className="absolute text-[120px] sm:text-[160px] md:text-[200px] lg:text-[280px] font-bold text-[#6C5DD3]/10 z-0 select-none">
+        {/* <h1 className="absolute text-[120px] sm:text-[160px] md:text-[200px] lg:text-[280px] font-bold text-[#6C5DD3]/10 z-0 select-none">
+          Estetica
+        </h1> */}
+        <h1 className="absolute text-[120px] sm:text-[160px] md:text-[200px] lg:text-[280px] font-bold bg-gradient-to-b from-[#6C5DD3] to-white bg-clip-text text-transparent z-0 select-none">
           Estetica
         </h1>
         <div className="absolute z-10 flex gap-6 justify-center items-center -mt-10">
-          <div className='w-[350px] h-[300px] rounded-[30px]'>
+          <div className='w-[370px] h-[350px] rounded-[30px]'>
             <img src={MobileImage} alt="mobile_image" className='bg-transparent' />
           </div>
         </div>

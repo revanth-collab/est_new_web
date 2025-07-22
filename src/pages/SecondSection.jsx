@@ -20,14 +20,13 @@ import image_content from "../assets/images/Image_Content.png";
 const SecondSection = () => {
   return (
     <div className="px-4 pt-16 pb-4 sm:pt-20 sm:pb-4 md:pt-24 md:pb-4 flex flex-col justify-center items-center gap-0 text-center">
-      {/* Heading */}
+
       <h1 className="text-black text-[22px] sm:text-[26px] md:text-[32px] font-semibold max-w-[90%] md:max-w-[700px]">
-        Lorem Ipsum is simply dummy
+        Your One-Stop Beauty & Wellness Hub
       </h1>
 
-      {/* Subtext */}
       <p className="text-[#A1A2A1] text-[14px] sm:text-[16px] md:text-[18px] font-medium max-w-[90%] md:max-w-[700px]">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text.
+        Discover top-rated salons, spas & skin-care services — book, save, and glow effortlessly.
       </p>
 
       {/* Image */}

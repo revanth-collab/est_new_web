@@ -1,8 +1,9 @@
 import React from 'react'
 import downloadImg from "../assets/images/Download.png";
-import qrImg from "../assets/images/QrCode.png";
+// import qrImg from "../assets/images/QrCode.png";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
+import partnerQR from "../assets/images/PartnerQr.jpeg"
 
 const PartnerUs = () => {
   return (
@@ -13,11 +14,11 @@ const PartnerUs = () => {
             </h1>
     
             <p className="text-[#A1A2A1] text-[16px] sm:text-[18px] font-medium tracking-wide mb-6">
-            Discover top-rated providers, explore exclusive services, and book appointments effortlessly — all in one place. Estetica makes self-care simple, smart, and accessible.
+            Estetica empowers you to grow your brand, promote services, and manage bookings with ease. Track performance and engage a wider audience—all from one powerful platform.
             </p>
     
             <div className="flex flex-col sm:flex-row-reverse justify-start items-center gap-4">
-            <img src={qrImg} alt="qr_image" className="w-[120px]" />
+            <img src={partnerQR} alt="qr_image" className="w-[120px]" />
     
             <div className="flex flex-row sm:flex-col gap-2">
                 <a className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]" href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">

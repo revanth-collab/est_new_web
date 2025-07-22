@@ -28,15 +28,15 @@ body{
     font-family: 'Lato',sans-serif;
 }
 .primary-btn {
-    background:linear-gradient(90deg, var(--btn-secondary), var(--btn-primary),var(--btn-primary));
+    /* background:linear-gradient(90deg, var(--btn-secondary), var(--btn-primary),var(--btn-primary)); */
+    background: var(--btn-primary);
     color: #ffffff;
-    padding: 5px 10px;
     font-size: 13px;
     font-weight: bold;
     font-family: 'Lato',sans-serif;
 }
 .primary-btn:hover{
-    background: var(--btn-primary);
+    background: var(--btn-secondary);
 }
 .secondary-btn {
     background: transparent;
@@ -76,4 +76,17 @@ body{
 /* global.css or add to tailwind config via @apply */
 .form-input {
   @apply w-full border-b border-[#CACACA] focus:outline-none focus:border-[#6C5DD3] text-sm px-2 py-2 bg-transparent;
+}
+
+
+/* Hide number input spinner (Chrome, Safari, Edge) */
+input.no-spinner::-webkit-outer-spin-button,
+input.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide number input spinner (Firefox) */
+input.no-spinner[type="number"] {
+  -moz-appearance: textfield;
 }
