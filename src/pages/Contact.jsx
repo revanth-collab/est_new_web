@@ -50,8 +50,8 @@ const Contact = () => {
     }
 
     const fetchMethod = async () => {
-        // const url= "https://crm.esteticanow.com/api/user/insert";
-        const url="http://localhost/crm/api/user/insert";
+        const url= "https://crm.esteticanow.com/api/user/insert";
+        // const url="http://localhost/crm/api/user/insert";
         const formData = new FormData();
 
         formData.append("name", name);

@@ -37,6 +37,7 @@ body{
 }
 .primary-btn:hover{
     background: var(--btn-secondary);
+    border: 1px solid var(--btn-primary);
 }
 .secondary-btn {
     background: transparent;
