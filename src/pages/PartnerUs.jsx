@@ -3,7 +3,7 @@ import downloadImg from "../assets/images/Download.png";
 // import qrImg from "../assets/images/QrCode.png";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
-import partnerQR from "../assets/images/PartnerQr.jpeg"
+import partnerQR from "../assets/images/PartnerQR.jpeg"
 
 const PartnerUs = () => {
   return (
