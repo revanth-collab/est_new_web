@@ -19,6 +19,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import img from "../../assets/images/est_logo.png";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -31,9 +32,11 @@ const Header = () => {
         onClick={()=>navigate('/')}
       />
       <div className="flex flex-wrap gap-2 sm:gap-5">
-        {/* <button className="rounded-[20px] primary-btn outline-none"><a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Download</a></button> */}
-        <button className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px]" onClick={()=>navigate('/')}>Home</button>
-        <button className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px]" onClick={()=>navigate('/contact')}>Contact</button>
+        <Link to="/" className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px] text-center flex items-center justify-center">
+          Home
+        </Link>
+        <Link to="/contact" className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px] text-center flex items-center justify-center">Contact</Link>
+        {/* <button  onClick={()=>navigate('/contact')}>Contact</button> */}
       </div>
     </div>
   );
