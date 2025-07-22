@@ -32,7 +32,7 @@ const Header = () => {
       />
       <div className="flex flex-wrap gap-2 sm:gap-5">
         {/* <button className="rounded-[20px] primary-btn outline-none"><a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Download</a></button> */}
-        <button className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px]">Home</button>
+        <button className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px]" onClick={()=>navigate('/')}>Home</button>
         <button className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px]" onClick={()=>navigate('/contact')}>Contact</button>
       </div>
     </div>
