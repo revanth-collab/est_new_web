@@ -52,7 +52,6 @@ import { FaApple } from "react-icons/fa";
 const DownloadSection = () => {
   return (
     <div className="download-section flex flex-col-reverse md:flex-row justify-center items-center gap-10 px-4 md:px-10 pt-10 pb-6">
-      {/* Left: Image */}
       <div className="w-full md:w-1/2 flex justify-center">
         <img
           src={downloadImg}
@@ -61,7 +60,6 @@ const DownloadSection = () => {
         />
       </div>
 
-      {/* Right: Text and App Links */}
       <div className="w-full md:w-1/2 max-w-[700px] text-center md:text-left">
         <h1 className="text-[#000000] text-[30px] sm:text-[40px] md:text-[50px] leading-tight md:leading-[60px] font-semibold mb-4">
           Download the <span className="text-[#6C5DD3]">esteticanow</span> App
@@ -72,28 +70,27 @@ const DownloadSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          {/* QR */}
+
           <img src={qrImg} alt="qr_image" className="w-[120px]" />
 
-          {/* App Store Buttons */}
+
           <div className="flex flex-row sm:flex-col gap-2">
-            {/* Google Play */}
-            <div className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]">
+            
+            <a className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]" href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">
               <BiLogoPlayStore className="text-white size-6" />
               <div>
                 <p className="text-[10px] text-white tracking-tighter">GET IT ON</p>
                 <p className="text-white text-[14px] font-semibold">Google Play</p>
               </div>
-            </div>
+            </a>
 
-            {/* App Store */}
-            <div className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]">
+            <a className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]" href="https://apps.apple.com/in/app/estetica/id6739260215" target="_blank">
               <FaApple className="text-white size-6" />
               <div>
                 <p className="text-[10px] text-white tracking-tighter">Download on</p>
                 <p className="text-white text-[14px] font-semibold">App Store</p>
-              </div>
-            </div>
+              </div>  
+            </a>
           </div>
         </div>
       </div>

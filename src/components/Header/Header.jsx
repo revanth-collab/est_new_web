@@ -27,11 +27,12 @@ const Header = () => {
       <img
         src={img}
         alt="logo"
-        className="w-40 sm:w-52 md:w-[200px] h-auto p-1 px-2 rounded-md"
+        className="w-40 sm:w-52 md:w-[200px] h-auto p-1 px-2 rounded-md cursor-pointer"
+        onClick={()=>navigate('/')}
       />
       <div className="flex flex-wrap gap-3 sm:gap-5">
-        <button className="rounded-[20px] primary-btn">Download</button>
-        <button className="rounded-[20px] secondary-btn" onClick={()=>navigate('/contact')}>Contact</button>
+        <button className="rounded-[20px] primary-btn outline-none"><a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Download</a></button>
+        <button className="rounded-[20px] secondary-btn outline-none" onClick={()=>navigate('/contact')}>Contact</button>
       </div>
     </div>
   );

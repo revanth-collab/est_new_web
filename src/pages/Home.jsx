@@ -63,6 +63,7 @@
 
 
 import React from 'react';
+import MobileImage from "../assets/images/mobileImage.png"
 
 const Home = () => {
   return (
@@ -78,58 +79,62 @@ const Home = () => {
       </p>
 
       <button className='text-white font-semibold bg-[#6C5DD3] p-2 px-5 rounded-[20px] z-10'>
-        Get the App
+        <a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Get the App</a>
       </button>
 
-      <div className='relative w-100 flex justify-center items-center mt-10'>
+      <div className='relative w-100 flex justify-center items-center mt-10 gap-0'>
         <h1 className="absolute text-[120px] sm:text-[160px] md:text-[200px] lg:text-[280px] font-bold text-[#6C5DD3]/10 z-0 select-none">
           Estetica
         </h1>
-        <div className=" absolute z-10 mt-10 flex gap-6 justify-center items-center">
-          <div className="w-[150px] h-[300px] bg-black rounded-[30px] shadow-xl"></div>
-          <div className="w-[150px] h-[300px] bg-black rounded-[30px] shadow-xl rotate-[-10deg]"></div>
+        <div className="absolute z-10 flex gap-6 justify-center items-center -mt-10">
+          <div className='w-[350px] h-[300px] rounded-[30px]'>
+            <img src={MobileImage} alt="mobile_image" className='bg-transparent' />
+          </div>
         </div>
-        <div className="bg-white p-6 mt-[100px] sm:p-8 rounded-xl shadow-md w-full max-w-[90%] sm:max-w-[600px] flex justify-around items-center gap-5 z-10">
-          <div className="flex flex-col text-center">
-            <h1 className="text-[24px] font-bold text-[#6C5DD3]">5000+</h1>
-            <p className="text-gray-600 text-[14px]">Stores</p>
+        <div className="bg-white p-6 mt-[100px] sm:px-10 sm:py-6 rounded-xl shadow-md w-full max-w-[90%] sm:max-w-[600px] flex justify-around items-center  gap-5 sm:gap-10 z-10">
+          <div className="flex flex-col text-left w-[100px]">
+            <h1 className="text-[18px] sm:text-[24px] font-bold text-[#6C5DD3]">5000+</h1>
+            <p className="text-gray-600 text-[10px] sm:text-[14px]">Stores</p>
           </div>
-          <div className="flex flex-col text-center">
-            <h1 className="text-[24px] font-bold text-[#6C5DD3]">100+</h1>
-            <p className="text-gray-600 text-[14px]">Cities</p>
+          <div className="flex flex-col text-left w-[100px]">
+            <h1 className="text-[18px] sm:text-[24px] font-bold text-[#6C5DD3]">100+</h1>
+            <p className="text-gray-600 text-[10px] sm:text-[14px]">Cities</p>
           </div>
-          <div className="flex flex-col text-center">
-            <h1 className="text-[24px] font-bold text-[#6C5DD3]">20,000</h1>
-            <p className="text-gray-600 text-[14px]">Services</p>
+          <div className="flex flex-col text-left w-[80px]">
+            <h1 className="text-[18px] sm:text-[24px] font-bold text-[#6C5DD3]">20,000</h1>
+            <p className="text-gray-600 text-[10px] sm:text-[14px]">Services</p>
           </div>
         </div>
       </div>
 
-      {/* <div className="relative w-full flex flex-col items-center mt-20">
-        <h1 className="absolute text-[120px] sm:text-[160px] md:text-[200px] lg:text-[280px] font-bold text-[#6C5DD3]/10 z-0 select-none whitespace-nowrap">
+      {/* <div className='relative w-full flex flex-col items-center mt-10'>
+        <h1 className="absolute text-[60px] sm:text-[120px] md:text-[160px] lg:text-[200px] font-bold text-[#6C5DD3]/10 z-0 select-none text-center leading-none whitespace-nowrap">
           Estetica
         </h1>
 
-        <div className="relative z-10 flex gap-6 justify-center items-center mb-32">
-          <div className="w-[120px] sm:w-[140px] md:w-[150px] h-[240px] sm:h-[280px] md:h-[300px] bg-black rounded-[30px] shadow-xl" />
-          <div className="w-[120px] sm:w-[140px] md:w-[150px] h-[240px] sm:h-[280px] md:h-[300px] bg-black rounded-[30px] shadow-xl rotate-[-10deg]" />
+        <div className="absolute z-10 -mt-10 flex justify-center items-center">
+          <div className='w-[250px] sm:w-[300px] md:w-[350px] h-auto rounded-[30px]'>
+            <img src={MobileImage} alt="mobile_image" className='w-full h-auto bg-transparent' />
+          </div>
         </div>
 
-        <div className="absolute bottom-[-40px] sm:bottom-[-50px] z-20 bg-white p-6 sm:p-8 rounded-xl shadow-md w-full max-w-[90%] sm:max-w-[600px] flex flex-col sm:flex-row justify-around items-center gap-6 sm:gap-5">
+        <div className="relative z-10 bg-white px-4 py-6 sm:px-6 sm:py-8 mt-[200px] rounded-xl shadow-md w-[90%] sm:w-[80%] max-w-[700px] flex justify-around items-center gap-4 sm:gap-6">
           <div className="flex flex-col text-center">
-            <h1 className="text-[24px] font-bold text-[#6C5DD3]">5000+</h1>
-            <p className="text-gray-600 text-[14px]">Stores</p>
+            <h1 className="text-[20px] sm:text-[24px] font-bold text-[#6C5DD3]">5000+</h1>
+            <p className="text-gray-600 text-[13px] sm:text-[14px]">Stores</p>
           </div>
           <div className="flex flex-col text-center">
-            <h1 className="text-[24px] font-bold text-[#6C5DD3]">100+</h1>
-            <p className="text-gray-600 text-[14px]">Cities</p>
+            <h1 className="text-[20px] sm:text-[24px] font-bold text-[#6C5DD3]">100+</h1>
+            <p className="text-gray-600 text-[13px] sm:text-[14px]">Cities</p>
           </div>
           <div className="flex flex-col text-center">
-            <h1 className="text-[24px] font-bold text-[#6C5DD3]">20,000</h1>
-            <p className="text-gray-600 text-[14px]">Services</p>
+            <h1 className="text-[20px] sm:text-[24px] font-bold text-[#6C5DD3]">20,000</h1>
+            <p className="text-gray-600 text-[13px] sm:text-[14px]">Services</p>
           </div>
         </div>
       </div> */}
+
+
     </div>
   );
 };

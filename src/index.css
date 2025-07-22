@@ -30,7 +30,7 @@ body{
 .primary-btn {
     background:linear-gradient(90deg, var(--btn-secondary), var(--btn-primary),var(--btn-primary));
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 13px;
     font-weight: bold;
     font-family: 'Lato',sans-serif;
@@ -42,7 +42,7 @@ body{
     background: transparent;
     border: 1px solid var(--btn-primary);
     color:var(--btn-primary);
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 13px;
     font-weight: bold;
     font-family: 'Lato',sans-serif;
@@ -69,8 +69,11 @@ body{
 .primary-color{
     color: var(--btn-primary);
 }
+.contact-us {
+    background: linear-gradient(180deg, var(--primary),var(--secondary),#ffffff);
+}
 
 /* global.css or add to tailwind config via @apply */
 .form-input {
-  @apply w-full border-b border-gray-300 focus:outline-none focus:border-[#6C5DD3] text-sm px-2 py-2 bg-transparent;
+  @apply w-full border-b border-[#CACACA] focus:outline-none focus:border-[#6C5DD3] text-sm px-2 py-2 bg-transparent;
 }
