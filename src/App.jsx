@@ -16,7 +16,8 @@ const Dashboard = lazy(() => import('./pages/Dashboard.jsx')); // Admin Dashboar
 const PageNotFound = lazy(() => import('./pages/PageNotFound.jsx')); // 404 Page
 const Loading = lazy(() => import('./components/Loading/Loading.jsx'));
 const Header = lazy(() => import('./components/Header/Header.jsx'));
-const Contact = lazy(() => import('./pages/Contact.jsx'));
+const Contact = lazy(() => import('./pages/Contact1.jsx'));
+const PartnerPage = lazy(() => import('./pages/PartnerPage.jsx'));
 
 
 // Protected route wrapper
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Layout />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/partner' element={<PartnerPage />} />
 
           {/* Routes WITH Layout */}
           <Route element={<Layout />}>

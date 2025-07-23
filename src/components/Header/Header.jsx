@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 md:px-10 gap-2">
+    <div className="flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 md:px-10 gap-2 z-[1000]">
       <img
         src={img}
         alt="logo"
@@ -35,7 +35,7 @@ const Header = () => {
         <Link to="/" className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px] text-center flex items-center justify-center">
           Home
         </Link>
-        <Link to="/contact" className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px] text-center flex items-center justify-center">Contact</Link>
+        <Link to="/partner" className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px] text-center flex items-center justify-center">For Partners</Link>
         {/* <button  onClick={()=>navigate('/contact')}>Contact</button> */}
       </div>
     </div>

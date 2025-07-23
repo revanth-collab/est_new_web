@@ -44,18 +44,18 @@
 
 
 import React from 'react';
-import downloadImg from "../assets/images/Download.png";
-// import qrImg from "../assets/images/QrCode.png";
+// import downloadImg from "../assets/images/Download.png";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
 import userQR from "../assets/images/UserQR.jpeg"
+import DownloadImage from "../assets/images/Download_Image.png"
 
 const DownloadSection = () => {
   return (
     <div className="download-section flex flex-col-reverse md:flex-row justify-center items-center gap-10 px-4 md:px-10 pt-10 pb-6">
       <div className="w-full md:w-1/2 flex justify-center">
         <img
-          src={downloadImg}
+          src={DownloadImage}
           alt="Download_image"
           className="w-full max-w-[400px] md:max-w-[430px] mt-6 md:mt-0"
         />

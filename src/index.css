@@ -91,3 +91,26 @@ input.no-spinner::-webkit-inner-spin-button {
 input.no-spinner[type="number"] {
   -moz-appearance: textfield;
 }
+
+.partnerus-bg {
+  background-color: #0D0C17;
+  min-height: 100vh;
+}
+.partner-button {
+  background: linear-gradient(90deg,rgba(191, 166, 255, 1),rgba(108, 93, 211, 1),rgba(108, 93, 211, 1));
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+}

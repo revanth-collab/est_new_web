@@ -1,9 +1,10 @@
 import React from 'react'
-import downloadImg from "../assets/images/Download.png";
+// import downloadImg from "../assets/images/Download.png";
 // import qrImg from "../assets/images/QrCode.png";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
 import partnerQR from "../assets/images/PartnerQR.jpeg"
+import PartnerImage from "../assets/images/PartnerUs_Image.png"
 
 const PartnerUs = () => {
   return (
@@ -42,7 +43,7 @@ const PartnerUs = () => {
 
         <div className="w-full md:w-2/5 flex justify-center">
             <img
-                src={downloadImg}
+                src={PartnerImage}
                 alt="Download_image"
                 className="w-full max-w-[400px] md:max-w-[430px] mt-6 md:mt-0"
             />

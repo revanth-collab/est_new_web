@@ -64,6 +64,7 @@
 
 import React from 'react';
 import MobileImage from "../assets/images/mobileImage.png"
+import UpdatedMobileImage from "../assets/images/UpdatedHomePageImage.png"
 
 const Home = () => {
   return (

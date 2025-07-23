@@ -6,11 +6,13 @@ import DownloadSection from '../pages/DownloadSection'
 import PartnerUs from '../pages/PartnerUs'
 import Feedback from '../pages/Feedback'
 import Footer from '../pages/Footer'
+import HomePage from '../pages/HomePage'
 
 const Layout = () => {
     return (
         <div>
             <Header />
+            {/* <HomePage /> */}
             <Home />
             <SecondSection />
             <DownloadSection />

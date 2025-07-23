@@ -38,7 +38,8 @@ const SecondSection = () => {
       <img
         src={image_content}
         alt="image_content"
-        className="w-full max-w-[700px] h-auto mt-6"
+        className="w-full max-w-[680px] h-auto mt-6"
+        style={{ maxHeight: 'calc(100% - 10px)' }}
       />
 
     </div>

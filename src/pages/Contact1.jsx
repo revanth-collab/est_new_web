@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const Services = ['Clinic','Spa','Salon']
 const Outlets = ['',"Single Outlet",'Multiple Outlet','Corparate Franchise','Corporate Flagship']
 
-const Contact = () => {
+const Contact1 = () => {
     const [name,setName] = useState('');
     const [role,setRole] = useState('');
     const [email,setEmail] = useState('');
@@ -139,4 +139,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact1
