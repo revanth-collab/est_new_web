@@ -16,22 +16,30 @@ import Footer from "./Footer"
 const PartnerPage = () => {
   const navigate = useNavigate();
   return (
-    <div className='relative partnerus-bg'>
-      <Header/>
+    <>
+      <Header color='#0D0C17'/>
         {/* <img src={BorderImage} alt="Border_Image" className='absolute top-0 right-0 h-[190px] sm:h-[300px] md:h-[390px] z-0' /> */}
-        <img src={Vector} alt="vector" className='absolute top-[50px] md:top-[120px] md:left-20 h-[12px] z-0' />
+        {/* <img src={Vector} alt="vector" className='absolute top-[80px] left-10 md:top-[120px] md:left-20 h-[12px] z-0' /> */}
 
-        <div className='relative pb-5'>
-          <div className='mt-10'>
+        <div className='relative bg-[#0D0C17]'>
+          <div className='pt-10'>
               <div className='flex flex-col justify-center items-center'>
                   <h1 className='text-[#FFFFFF] text-[24px] sm:text-[50px] text-center font-bold leading-[24px] sm:leading-[70px] w-[90%] mb-5'>Everything You Need to Run <br />& Grow Your Business</h1>
                   <p className='text-[#64748B] font-medium text-center text-[14px] leading-[18px] w-[90%] sm:w-[57%] mb-5'>Estetica’s Partner Suite brings bookings, staff, revenue, and customer management into one smart system — built to simplify your day-to-day and boost your growth.</p>
                   <button className='partner-button px-[65px] sm:px-[100px] py-3 sm:py-4 rounded-[15px] mb-[10px] text-white font-semibold' onClick={()=>navigate('/contact')}>Register your store</button>
               </div>
           </div>
-           <div className='flex flex-col justify-center items-center'>
-              <img src={dashboardImg} alt="dashboard_image" className="w-full max-w-[1100px] h-auto mt-6" />
-            </div>
+
+          <div className="sticky w-full flex justify-center pt-5 pb-5 bg-white">
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-[#0D0C17] z-[-1]" />
+            <div className="absolute bottom-0 left-0 w-full h-1/2 z-[-1]" />
+            <img
+              src={dashboardImg}
+              alt="dummyImage"
+              className="w-full max-w-[900px] h-auto"
+            />
+          </div>
+
         </div>
 
 
@@ -42,7 +50,7 @@ const PartnerPage = () => {
         <Contact />
         <FAQSection />
         <Footer />
-    </div>
+    </>
   )
 }
 

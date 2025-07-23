@@ -21,10 +21,11 @@ import { useNavigate } from 'react-router-dom';
 import img from "../../assets/images/est_logo.png";
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({color}) => {
+  
   const navigate = useNavigate();
   return (
-    <div className="flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 md:px-10 gap-2 z-[1000]">
+    <div className={`flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 md:px-10 gap-2 z-[1000] ${color !== undefined ? 'bg-[#0D0C17]':""}`}>
       <img
         src={img}
         alt="logo"
@@ -35,7 +36,7 @@ const Header = () => {
         <Link to="/" className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px] text-center flex items-center justify-center">
           Home
         </Link>
-        <Link to="/partner" className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px] text-center flex items-center justify-center">For Partners</Link>
+        <Link to="/partner" className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px] text-center flex items-center justify-center">Partners</Link>
         {/* <button  onClick={()=>navigate('/contact')}>Contact</button> */}
       </div>
     </div>
