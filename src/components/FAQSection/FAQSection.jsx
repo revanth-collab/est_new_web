@@ -9,20 +9,28 @@ const faqs = [
       'The Partner Suite includes the Estetica CRM, Partner App, and Professional App — designed to help you manage bookings, staff, customers, and business insights all from one unified system.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet, consectetur ?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    question: '2. Can my staff use the Professional App for home visits?',
+    answer: 'Yes. The Professional App is built to support both in-store and on-location (home visit) services. Staff can track their appointments, update statuses, and access client info from anywhere.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet, consectetur ?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    question: '3. How does the CRM help my business?',
+    answer: 'The CRM gives you real-time insights into bookings, revenue, staff performance, and customer trends — helping you make informed decisions and grow faster.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet, consectetur ?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    question: '4. Can I manage multiple outlets from one account?',
+    answer: 'Absolutely. Estetica’s CRM and Partner App support multi-outlet management, so you can oversee performance, teams, and bookings across locations from a single dashboard.',
   },
   {
-    question: 'Lorem ipsum dolor sit amet, consectetur ?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    question: '5. Is there training provided for using the Partner Suite?',
+    answer: 'Yes, we offer onboarding assistance, training videos, and ongoing support to ensure you and your team get the most out of the Partner Suite.',
+  },
+  {
+    question: '6. Can I run offers or loyalty programs through the platform?',
+    answer: 'Yes. You can launch targeted offers, create loyalty programs, and run promotions directly from the Partner App or CRM.',
+  },
+  {
+    question: '7. Is the Partner Suite available on mobile?',
+    answer: 'Yes. Both the Partner App and Professional App are mobile-first and available on Android and iOS, while the CRM is accessible via web.',
   },
 ];
 

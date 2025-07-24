@@ -4,7 +4,7 @@ import shop from "../assets/images/shop.svg"
 
 const HomePage = () => {
   return (
-    <div className='relative  md:-mt-5 px-4  md:px-20 flex flex-col md:flex-row justify-center items-center gap-4'>
+    <div className='relative  md:-mt-5 px-4  md:px-10 lg:px-14 xl:px-20 flex flex-col md:flex-row justify-center items-center gap-4'>
       <div className='flex flex-col sm:flex-row items-center'>
         <div className='flex flex-col w-full md:w-1/2 items-center md:items-start gap-4 md:gap-1 lg:gap-4 py-2'>
           <h1 className="text-black text-[26px] sm:text-[36px] md:text-[30px] lg:text-[60px] leading-tight md:leading-[35px] lg:leading-[65px] font-semibold max-w-[90%] md:max-w-[700px] z-10">
@@ -44,7 +44,7 @@ const HomePage = () => {
               Estetica
             </h1>
 
-            <div className='absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md p-2 md:p-3 lg:p-6 w-full max-w-[90%] md:max-w-[90%] rounded-xl flex justify-around items-center z-50'>
+            <div className='absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md p-2 md:p-3 lg:p-6 w-full max-w-[100%] rounded-xl flex justify-around items-center z-50'>
               <div className='flex flex-row'>
                 <div className='p-2'>
                   <img src={shop} alt="shop" className='h-[30px]' />

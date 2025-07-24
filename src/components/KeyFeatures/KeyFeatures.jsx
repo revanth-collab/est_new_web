@@ -102,7 +102,7 @@ const KeyFeatures = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{
                     duration: 0.6,
-                    delay: 0.2 + index * 0.5, // staggered animation
+                    delay: 1 + index * 0.2, // staggered animation
                     ease: 'easeOut',
                   }}
                   className="flex sm:flex-col items-start gap-4"

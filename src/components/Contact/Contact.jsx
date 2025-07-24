@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const Services = ['Clinic','Spa','Salon']
 const Outlets = ['',"Single Outlet",'Multiple Outlet','Corparate Franchise','Corporate Flagship']
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
     const [name,setName] = useState('');
     const [role,setRole] = useState('');
     const [email,setEmail] = useState('');
@@ -80,7 +80,7 @@ const Contact = () => {
     }
 
   return (
-        <div className="w-full py-16  px-6 md:px-10 lg:px-[90px] bg-white">
+        <div ref={contactRef} id="contact" className="w-full py-16  px-6 md:px-10 lg:px-[90px] bg-white">
             
             <div className="max-w-screen-xl mx-auto mb-12 text-center sm:text-left">
                 <p className="text-[12px] text-gray-500 font-semibold mb-2">Get Started</p>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header/Header'
 import dashboardImg from "../assets/images/PartnerDashboard.png";
@@ -16,6 +16,8 @@ import Footer from "./Footer"
 
 const PartnerPage = () => {
   const navigate = useNavigate();
+  const contactRef = useRef();
+
   return (
       <>
         <Header color='#0D0C17'/>
@@ -27,7 +29,9 @@ const PartnerPage = () => {
               <div className='flex flex-col justify-center items-center'>
                   <h1 className='text-[#FFFFFF] text-[24px] sm:text-[50px] text-center font-bold leading-[24px] sm:leading-[70px] w-[90%] mb-5'>Everything You Need to Run <br />& Grow Your Business</h1>
                   <p className='text-[#64748B] font-medium text-center text-[14px] leading-[18px] w-[90%] sm:w-[57%] mb-5'>Estetica’s Partner Suite brings bookings, staff, revenue, and customer management into one smart system — built to simplify your day-to-day and boost your growth.</p>
-                  <button className='partner-button px-[65px] sm:px-[100px] py-3 sm:py-4 rounded-[15px] mb-[10px] text-white font-semibold' onClick={()=>navigate('/contact')}>Register your store</button>
+                  <button className='partner-button px-[65px] sm:px-[100px] py-3 sm:py-4 rounded-[15px] mb-[10px] text-white font-semibold' onClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}>
+                    Register your store
+                  </button>
               </div>
           </div>
 
@@ -48,7 +52,8 @@ const PartnerPage = () => {
         <WeProvide />
         <KeyFeatures />
         <OnboardingCard />
-        <Contact />
+        {/* <Contact /> */}
+        <Contact contactRef={contactRef} />
         <FAQSection />
         <Footer />
       </>
