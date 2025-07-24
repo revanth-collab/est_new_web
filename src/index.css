@@ -97,7 +97,7 @@ input.no-spinner[type="number"] {
   min-height: 100vh;
 }
 .partner-button {
-  background: linear-gradient(90deg,rgba(191, 166, 255, 1),rgba(108, 93, 211, 1),rgba(108, 93, 211, 1));
+  background: linear-gradient(90deg,rgba(191, 166, 255, 1),rgba(108, 93, 211, 1));
 }
 
 @layer utilities {
@@ -113,4 +113,9 @@ input.no-spinner[type="number"] {
   .animate-scroll {
     animation: scroll 20s linear infinite;
   }
+}
+
+.ad_card {
+  background: linear-gradient(90deg , rgba(108, 93, 211, 0.2), rgba(118, 104, 220, 0.15));
+  border: 1.5px solid rgba(108, 93, 211, 1);
 }

@@ -50,6 +50,7 @@
 
 import React from 'react';
 import laptop from '../../assets/images/laptop.png';
+import UpdateLaptop from "../../assets/images/UpdateLaptop.png"
 import Image2 from "../../assets/images/PartnerPageImage2.png"
 import Image3 from "../../assets/images/PartnerPageImage3.png"
 
@@ -60,7 +61,7 @@ const WeProvide = () => {
       description:
         'Get a bird’s-eye view of your business — from appointments to analytics, all in real-time. Easily manage bookings, monitor staff performance, check reports, and control pricing.',
       imageLeft: true,
-      image:laptop
+      image:UpdateLaptop
     },
     {
       title: 'Automated Booking Management',
@@ -79,10 +80,10 @@ const WeProvide = () => {
   ];
 
   return (
-    <div className="w-full py-16  px-6 md:px-10 lg:px-[90px] bg-white">
+    <div className="w-full py-[70px]  px-6 md:px-10 lg:px-[90px] bg-white">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Side Title */}
-        <div className="md:w-1/3 md:h-[285px] sticky top-6 md:top-10 h-fit">
+        <div className="md:w-1/3 md:h-[285px] sticky top-6 md:top-[30%] h-fit">
           <h4 className="text-indigo-600 font-medium mb-3">We Provide for you</h4>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug">
             Smart tools to grow your business, all in one platform
@@ -94,7 +95,7 @@ const WeProvide = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`sticky top-[135px] md:top-10  flex flex-col ${
+              className={`sticky top-[135px] md:top-[30%]  flex flex-col ${
                 service.imageLeft ? 'md:flex-row' : 'md:flex-row-reverse'
               } bg-white rounded-2xl shadow-md overflow-hidden`}
             >

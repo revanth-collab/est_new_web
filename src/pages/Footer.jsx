@@ -5,8 +5,8 @@ import { BsDot } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="bg-[#FCFCFC] text-black w-full pb-10">
-      <footer className="border-t px-6 sm:px-10 py-10">
+    <div className="bg-[#FCFCFC] text-black w-full">
+      <footer className="border-t px-6 sm:px-10 py-5">
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between gap-10">
           <div className="flex flex-col items-center md:items-start gap-3">
             <img src={img} alt="logo" className="w-[180px]" />

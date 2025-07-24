@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import PartnerLady from "../../assets/images/partner_lady.png"
 
 const features = [
@@ -25,8 +26,43 @@ const features = [
 ];
 
 const KeyFeatures = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, threshold: 0.2 });
+
   return (
-    <div className="w-full bg-white py-16  px-6 md:px-10 lg:px-20">
+    // <div className="w-full bg-white py-16  px-6 md:px-10 lg:px-20">
+    //   <div className="flex flex-col lg:flex-row justify-between gap-10">
+    //     <div className="w-full lg:w-1/2 flex justify-center">
+    //       <img
+    //         src={PartnerLady}
+    //         alt="Illustration"
+    //         className="w-full max-w-[400px] md:max-w-[500px] h-fit"
+    //       />
+    //     </div>
+
+    //     <div className="w-full lg:w-1/2">
+    //       <p className="text-sm text-[#7E3AF2] font-medium mb-2">Our Key Features</p>
+    //       <h2 className="text-[28px] md:text-[40px] w-[80%] font-bold leading-tight text-gray-900 mb-8">
+    //         Handle & Grow with Confidence
+    //       </h2>
+
+    //       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    //         {features.map((feature) => (
+    //           <div key={feature.id} className="flex sm:flex-col items-start gap-4">
+    //             <div className="bg-[#7E3AF2] text-white font-semibold rounded-full w-9 h-9 flex items-center justify-center text-sm">
+    //               {feature.id}
+    //             </div>
+    //             <div>
+    //               <h3 className="text-[16px] font-semibold text-gray-900 mb-1">{feature.title}</h3>
+    //               <p className="text-[14px] text-gray-600 w-[80%]">{feature.description}</p>
+    //             </div>
+    //           </div>
+    //         ))}
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="w-full bg-white py-16 px-6 md:px-10 lg:px-20">
       <div className="flex flex-col lg:flex-row justify-between gap-10">
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
@@ -36,26 +72,53 @@ const KeyFeatures = () => {
           />
         </div>
 
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="w-full lg:w-1/2"
+        >
+        <div>
           <p className="text-sm text-[#7E3AF2] font-medium mb-2">Our Key Features</p>
           <h2 className="text-[28px] md:text-[40px] w-[80%] font-bold leading-tight text-gray-900 mb-8">
             Handle & Grow with Confidence
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {features.map((feature) => (
-              <div key={feature.id} className="flex sm:flex-col items-start gap-4">
-                <div className="bg-[#7E3AF2] text-white font-semibold rounded-full w-9 h-9 flex items-center justify-center text-sm">
-                  {feature.id}
-                </div>
-                <div>
-                  <h3 className="text-[16px] font-semibold text-gray-900 mb-1">{feature.title}</h3>
-                  <p className="text-[14px] text-gray-600 w-[80%]">{feature.description}</p>
-                </div>
-              </div>
+            {features.map((feature,index) => (
+              // <div key={feature.id} className="flex sm:flex-col items-start gap-4">
+              //   <div className="bg-[#7E3AF2] text-white font-semibold rounded-full w-9 h-9 flex items-center justify-center text-sm">
+              //     {feature.id}
+              //   </div>
+              //   <div>
+              //     <h3 className="text-[16px] font-semibold text-gray-900 mb-1">{feature.title}</h3>
+              //     <p className="text-[14px] text-gray-600 w-[80%]">{feature.description}</p>
+              //   </div>
+              // </div>
+              <motion.div
+                  key={feature.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.2 + index * 0.5, // staggered animation
+                    ease: 'easeOut',
+                  }}
+                  className="flex sm:flex-col items-start gap-4"
+                >
+                  <div className="bg-[#7E3AF2] text-white font-semibold rounded-full w-9 h-9 flex items-center justify-center text-sm">
+                    {feature.id}
+                  </div>
+                  <div>
+                    <h3 className="text-[16px] font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                    <p className="text-[14px] text-gray-600 w-[80%]">{feature.description}</p>
+                  </div>
+                </motion.div>
             ))}
           </div>
         </div>
+        </motion.div>
       </div>
     </div>
   );

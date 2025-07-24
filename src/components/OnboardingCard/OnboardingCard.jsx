@@ -3,8 +3,8 @@ import partnerAd from "../../assets/images/partner_ad.png";
 
 const OnboardingCard = () => {
   return (
-    <div className="w-full px-4 py-8 bg-white">
-      <div className="max-w-5xl mx-auto bg-white border border-gray-200 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center gap-6 shadow-sm">
+    <div className=" py-4 bg-white">
+      <div className="max-w-5xl mx-auto ad_card border border-gray-200 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center gap-6 shadow-sm">
         <div className="w-full md:w-1/2">
           <img
             src={partnerAd}
@@ -20,6 +20,7 @@ const OnboardingCard = () => {
           <p className="text-sm md:text-base text-gray-600">
             Our short video walks you through everything — from setting up your profile to adding your services. You’ll be up and running in just 10 minutes!
           </p>
+          <button className='partner-button py-3 px-5 rounded-lg mt-5 text-white font-semibold text-[12px]'>Register your store</button>
         </div>
       </div>
     </div>
