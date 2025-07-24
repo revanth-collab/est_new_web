@@ -40,7 +40,7 @@ const HomePage = () => {
 
         <div className='absolute bottom-0 flex justify-center items-center md:-bottom-44 lg:-bottom-32 w-full max-w-[90%]'>
           <div className='relative flex justify-center items-center w-full'>
-            <h1 className="w-full text-[100px] sm:text-[160px] md:text-[180px] lg:text-[300px] font-bold bg-gradient-to-b from-[#6C5DD3] to-white bg-clip-text text-transparent -z-40 select-none opacity-50">
+            <h1 className="w-full text-[100px] sm:text-[160px] md:text-[180px] lg:text-[300px] font-bold bg-gradient-to-b from-[#6C5DD3] to-white bg-clip-text text-transparent -z-40 select-none opacity-[0.10]">
               Estetica
             </h1>
 
