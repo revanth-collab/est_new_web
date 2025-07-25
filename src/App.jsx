@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import Layout from './layout/Layout.jsx';
 import ErrorBoundary from './others/ErrorBoundary.jsx';
 import ErrorFallback from './others/ErrorFallback.jsx';
+import Whatsapp from './components/Whatsapp/Whatsapp.jsx';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -44,6 +45,7 @@ const App = () => {
   return (
     <ErrorBoundary fallback={<ErrorFallback />}>
       <Suspense fallback={<Loading />}>
+        <Whatsapp />
         <ScrollToTop />
         <ToastContainer />
 

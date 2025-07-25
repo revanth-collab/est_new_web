@@ -48,11 +48,10 @@ const PartnerPage = () => {
         </div>
 
 
-        <PartnerCarousel />
+        {/* <PartnerCarousel /> */}
         <WeProvide />
         <KeyFeatures />
-        <OnboardingCard />
-        {/* <Contact /> */}
+        {/* <OnboardingCard /> */}
         <Contact contactRef={contactRef} />
         <FAQSection />
         <Footer />

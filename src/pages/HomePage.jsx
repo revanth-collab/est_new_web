@@ -2,6 +2,12 @@ import React from 'react'
 import UpdatedMobileImage from "../assets/images/UpdatedHomePageImage.png"
 import shop from "../assets/images/shop.svg"
 
+const stats = [
+  { value: '5000', label: 'Stores' },
+  { value: '100+', label: 'Cities' },
+  { value: '20,000', label: 'Services' },
+];
+
 const HomePage = () => {
   return (
     <div className='relative  md:-mt-5 px-4  md:px-10 lg:px-14 xl:px-20 flex flex-col md:flex-row justify-center items-center gap-4'>
@@ -44,7 +50,30 @@ const HomePage = () => {
               Estetica
             </h1>
 
-            <div className='absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md p-2 md:p-3 lg:p-6 w-full max-w-[100%] rounded-xl flex justify-around items-center z-50'>
+            
+
+            <div className="absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md 
+                            px-3 py-4 sm:px-6 sm:py-6 w-full max-w-[90%] mx-auto rounded-xl 
+                            flex flex-wrap justify-around items-center gap-y-4 z-50">
+              {stats.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 sm:gap-2 justify-center"
+                >
+                  <div className="w-6 h-6 sm:w-10 sm:h-10">
+                    <img src={shop} alt="shop" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="flex flex-col text-left">
+                    <div className="text-sm sm:text-3xl font-semibold text-black">
+                      {item.value}
+                    </div>
+                    <div className="text-xs sm:text-sm text-gray-500">{item.label}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* <div className='absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md p-2 md:p-3 lg:p-6 w-full max-w-[90%] rounded-xl flex justify-around items-center z-50'>
               <div className='flex flex-row'>
                 <div className='p-2'>
                   <img src={shop} alt="shop" className='h-[30px]' />
@@ -74,8 +103,7 @@ const HomePage = () => {
                   <p className="text-gray-600 text-[10px] sm:text-[14px]">Services</p>
                 </div>
               </div>
-            </div>
-
+            </div> */}
 
           </div>
         </div>
