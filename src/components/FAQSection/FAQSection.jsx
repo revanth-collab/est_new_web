@@ -28,14 +28,10 @@ const faqs = [
     question: '6. Can I run offers or loyalty programs through the platform?',
     answer: 'Yes. You can launch targeted offers, create loyalty programs, and run promotions directly from the Partner App or CRM.',
   },
-  {
-    question: '7. Is the Partner Suite available on mobile?',
-    answer: 'Yes. Both the Partner App and Professional App are mobile-first and available on Android and iOS, while the CRM is accessible via web.',
-  },
 ];
 
 const FAQSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index);

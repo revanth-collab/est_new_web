@@ -53,8 +53,7 @@ const App = () => {
           {/* Routes WITHOUT Layout */}
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Layout />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path='/partner' element={<PartnerPage />} />
+          <Route path='/contact' element={<PartnerPage />} />
 
           {/* Routes WITH Layout */}
           <Route element={<Layout />}>

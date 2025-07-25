@@ -61,26 +61,48 @@ const WeProvide = () => {
       description:
         'Get a bird’s-eye view of your business — from appointments to analytics, all in real-time. Easily manage bookings, monitor staff performance, check reports, and control pricing.',
       imageLeft: true,
-      image:UpdateLaptop
+      image:UpdateLaptop,
+      features: [
+        'Smart-Dashboard',
+        'Quick-Bookings',
+        'Staff-Tracking',
+        'Live-Analytics',
+        'Easy-Pricing',
+      ]
     },
     {
-      title: 'Automated Booking Management',
+      title: 'Partner App – Manage Anytime, Anywhere',
       description:
-        'Let your calendar fill itself. Customers can schedule appointments online while you manage your availability, buffer times, and cancellations effortlessly.',
+        'Run your outlet on-the-go. Accept bookings, manage availability, and launch offers with a tap. Stay connected with your business, wherever you are.',
       imageLeft: false,
-      image:Image2
+      image:Image2,
+      features: [
+        'Quick-Offers',
+        'On-the-Go',
+        'Always-Connected',
+        'Instant-Bookings',
+        'Smart-Availability',
+      ]
     },
     {
-      title: 'Insightful Reports and Analytics',
+      title: 'Professional App – Empower Your Staff',
       description:
-        'Understand trends, peak hours, and employee performance with powerful, easy-to-read reports. Make data-driven decisions to grow your business.',
+        'Let your team view their daily schedules, client notes,  mark attendance, and performance tracking at their fingertips .Seamlessly supports both in-store operations and home visit services.',
       imageLeft: true,
-      image:Image3
+      image:Image3,
+      features: [
+        'Team-Schedules',
+        'Client-Notes',
+        'Attendance',
+        'Performance-Track',
+        'Dual-Mode (for in-store + home visits)',
+      ]
+      
     },
   ];
 
   return (
-    <div className="w-full py-[70px]  px-6 md:px-10 lg:px-[90px] bg-white">
+    <div className="w-full py-[70px]  px-6 md:px-10 lg:px-[90px] lg:py-[150px] bg-white">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Side Title */}
         <div className="md:w-1/3 md:h-[285px] sticky top-6 md:top-[30%] h-fit">
@@ -97,10 +119,10 @@ const WeProvide = () => {
               key={index}
               className={`sticky top-[135px] md:top-[30%]  flex flex-col ${
                 service.imageLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-              } bg-white rounded-2xl shadow-md overflow-hidden`}
+              } bg-white rounded-3xl shadow-md overflow-hidden`}
             >
               {/* Image */}
-              <div className="w-full md:w-1/2 bg-[#F5F5F5] flex items-center justify-center p-4">
+              <div className="w-full md:w-1/10 bg-[#F5F5F5] flex items-center justify-center p-4">
                 <img
                   src={service.image}
                   alt="Service Illustration"
@@ -109,9 +131,25 @@ const WeProvide = () => {
               </div>
 
               {/* Text Content */}
-              <div className="w-full md:w-1/2 p-6 flex flex-col justify-center">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-sm text-gray-600">{service.description}</p>
+              <div className={`w-full md:w-7/10 p-6 flex flex-col justify-center ${service.imageLeft ? 'md:text-left' : 'md:text-right'}`}>
+                <h3 className="text-lg sm:text-2xl font-bold mb-2">{service.title}</h3>
+                {/* <p className="text-[16px] keading-[25px] text-[#64748B]">{service.description}</p> */}
+                {service.features && (
+                  // <ul className="flex flex-wrap gap-3 space-y-1 text-[14px] text-[#64748B] font-semibold">
+                  //   {service.features.map((feature, i) => (
+                  //     <li key={i} className="flex items-center gap-2">
+                  //       <span className="text-[#64748B]">•</span> {feature}
+                  //     </li>
+                  //   ))}
+                  // </ul>
+                  <ul className={`flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#64748B] font-semibold ${service.imageLeft ? 'md:justify-start' : 'md:justify-end'}`}>
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="gap-2 text-left w-[140px]">
+                        <span className="text-[#64748B]">•</span> {feature}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ))}

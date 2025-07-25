@@ -19,7 +19,7 @@ import image_content from "../assets/images/Image_Content.png";
 
 const SecondSection = () => {
   return (
-    <div className="px-4 pt-16 pb-4 sm:pt-20 sm:pb-4 md:pt-24 md:pb-4 flex flex-col justify-center items-center gap-0 text-center">
+    <div className="px-4 pt-16 pb-4 sm:pt-20 sm:pb-4 md:pt-24 md:pb-4 xl:pt-30 flex flex-col justify-center items-center gap-0 text-center">
 
       <h1 className="text-black text-[22px] sm:text-[26px] md:text-[32px] font-semibold max-w-[90%] md:max-w-[700px]">
         Your One-Stop Beauty & Wellness Hub
@@ -35,12 +35,19 @@ const SecondSection = () => {
         alt="image_content"
         className="w-[400px] h-[300px] mt-6"
       /> */}
+      {/* <img
+        src={image_content}
+        alt="image_content"
+        className="w-full max-w-[800px] h-auto mt-6"
+        style={{ maxHeight: 'calc(100% - 10px)' }}
+      /> */}
+
       <img
         src={image_content}
         alt="image_content"
-        className="w-full max-w-[680px] h-auto mt-6"
-        style={{ maxHeight: 'calc(100% - 10px)' }}
+        className="w-full max-w-[80%] h-auto max-h-[90vh] mt-6 object-contain"
       />
+
 
     </div>
   );

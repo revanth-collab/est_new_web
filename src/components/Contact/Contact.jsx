@@ -3,7 +3,7 @@ import MultiSelectDropdown from '../../pages/MultiSelectDropdown';
 import { toast } from 'react-toastify';
 
 const Services = ['Clinic','Spa','Salon']
-const Outlets = ['',"Single Outlet",'Multiple Outlet','Corparate Franchise','Corporate Flagship']
+const Outlets = ["Single Outlet",'Multiple Outlet','Corparate Franchise','Corporate Flagship']
 
 const Contact = ({ contactRef }) => {
     const [name,setName] = useState('');
@@ -66,14 +66,19 @@ const Contact = ({ contactRef }) => {
         });
 
         try {
-            const response = await fetch(url, {
-            method: "POST",
-            body: formData,
-            });
+            if(name=='' || email=='' || phoneNumber=='' || location=='' || typeOfOutlet=='' || numberOfOutlet==''){
+                toast.error("Please fill all the fields");
+                return;
+            }else{
+                const response = await fetch(url, {
+                    method: "POST",
+                    body: formData,
+                    });
 
-            const result = await response.json();
-            console.log("Response:", result);
-            toast.success('Response:',result);
+                    const result = await response.json();
+                    console.log("Response:", result);
+                    toast.success('Response:',result);
+            }
         } catch (error) {
             toast.error("Error Message",error.message);
         }

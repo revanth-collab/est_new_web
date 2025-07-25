@@ -36,7 +36,7 @@ const Header = ({color}) => {
         <Link to="/" className="rounded-[20px] primary-btn outline-none w-[70px] sm:w-[100px] text-center flex items-center justify-center">
           Home
         </Link>
-        <Link to="/partner" className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px] text-center flex items-center justify-center">Partners</Link>
+        <Link to="/contact" className="rounded-[20px] secondary-btn outline-none w-[75px] sm:w-[100px] text-center flex items-center justify-center">Partners</Link>
         {/* <button  onClick={()=>navigate('/contact')}>Contact</button> */}
       </div>
     </div>

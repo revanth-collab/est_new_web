@@ -53,7 +53,7 @@ const HomePage = () => {
             
 
             <div className="absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md 
-                            px-3 py-4 sm:px-6 sm:py-6 w-full max-w-[90%] mx-auto rounded-xl 
+                            px-3 py-4 sm:px-6 sm:py-6 lg:py-6 2xl:py-10 w-full max-w-[90%] mx-auto rounded-xl 
                             flex flex-wrap justify-around items-center gap-y-4 z-50">
               {stats.map((item, idx) => (
                 <div
