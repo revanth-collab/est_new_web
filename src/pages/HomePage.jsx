@@ -10,19 +10,29 @@ const stats = [
 
 const HomePage = () => {
   return (
-    <div className='relative  md:-mt-5 px-4  md:px-10 lg:px-14 xl:px-20 flex flex-col md:flex-row justify-center items-center gap-4'>
+    <div className='container mx-auto px-4  relative flex flex-col md:flex-row justify-center items-center gap-4'>
       <div className='flex flex-col sm:flex-row items-center'>
-        <div className='flex flex-col w-full md:w-1/2 items-center md:items-start gap-4 md:gap-1 lg:gap-4 py-2'>
-          <h1 className="text-black text-[26px] sm:text-[36px] md:text-[30px] lg:text-[60px] leading-tight md:leading-[35px] lg:leading-[65px] font-semibold max-w-[90%] md:max-w-[700px] z-10">
-              Your <span className="text-[#6C5DD3]">Beauty & Wellness</span> Ecosystem
+        <div className="md:-mt-4 flex flex-col w-full md:w-1/2 items-center md:items-start gap-4 md:gap-2 lg:gap-3 py-4 sm:py-6 md:py-8 lg:py-10">
+
+          <h1 className="text-black font-semibold text-[26px] sm:text-[28px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[50px] leading-[1.2] text-center md:text-left max-w-[90%] md:max-w-[700px] z-10">
+            Your <span className="text-[#6C5DD3]">Beauty & Wellness</span> Ecosystem
           </h1>
-          <p className="text-[#64748B] text-[16px] sm:text-[18px] md:text-[16px] max-w-[90%] md:max-w-[600px] z-10">
-              Discover top-rated salons, spas & clinics. Book instantly.
+
+          <p className="text-[#64748B] text-[14px] sm:text-[16px] md:text-[14px] lg:text-[18px] xl:text-[19px] leading-snug md:leading-normal text-center md:text-left max-w-[90%] md:max-w-[600px] z-10">
+            Discover top-rated salons, spas & clinics. Book instantly.
           </p>
-          <button className='text-white font-semibold bg-[#6C5DD3] p-2 px-5 rounded-[20px] z-10 mb-3'>
-              <a href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">Get the App</a>
-          </button>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.esteticaapp.user"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#6C5DD3] text-white font-semibold text-[14px] sm:text-[16px] px-6 py-2 rounded-full mb-2 z-10 hover:bg-[#5947c5] transition duration-200"
+          >
+            Get the App
+          </a>
+
         </div>
+
         {/* <div className="flex flex-col items-start text-center md:text-left w-full md:w-1/2 gap-4 z-10">
           <h1 className="text-black text-[28px] sm:text-[36px] lg:text-[56px] font-semibold leading-tight">
             Your <span className="text-[#6C5DD3]">Beauty & Wellness</span> Ecosystem
@@ -41,7 +51,7 @@ const HomePage = () => {
         </div> */}
 
         <div className='w-full md:w-1/2 z-10'>
-          <img src={UpdatedMobileImage} alt="mobileImage" className='w-full' />
+          <img src={UpdatedMobileImage} alt="mobileImage" className='w-full max-w-[500px] mx-auto' />
         </div>
 
         <div className='absolute bottom-0 flex justify-center items-center md:-bottom-44 lg:-bottom-32 w-full max-w-[90%]'>
@@ -52,8 +62,8 @@ const HomePage = () => {
 
             
 
-            <div className="absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md 
-                            px-3 py-4 sm:px-6 sm:py-6 lg:py-6 2xl:py-10 w-full max-w-[90%] mx-auto rounded-xl 
+            {/* <div className="absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md 
+                            px-3 py-4 sm:px-6 sm:py-3 lg:py-5 2xl:py-7 w-full max-w-[90%] mx-auto rounded-xl 
                             flex flex-wrap justify-around items-center gap-y-4 z-50">
               {stats.map((item, idx) => (
                 <div
@@ -71,39 +81,42 @@ const HomePage = () => {
                   </div>
                 </div>
               ))}
+            </div> */}
+
+
+            <div className="absolute bottom-0 md:bottom-40 lg:bottom-24 xl:bottom-28 2xl:bottom-20 bg-white shadow-md
+                            w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-7 2xl:py-10
+                            rounded-xl flex justify-around items-center gap-2 md:4 z-50">
+              {/* {stats.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-2 sm:gap-3 justify-center min-w-[100px] sm:min-w-[140px]"
+                >
+                  <div className="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 self-start">
+                    <img
+                      src={shop}
+                      alt="shop"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col text-left">
+                    <div className="text-[12px] sm:text-xl md:text-xl lg:text-2xl font-semibold text-black">
+                      {item.value}
+                    </div>
+                    <div className="text-[10px] sm:text-sm md:text-base text-gray-500">
+                      {item.label}
+                    </div>
+                  </div>
+                </div>
+              ))} */}
+
+              <h1 className="text-[10px] sm:text-[20px] md:text-[12px] lg:text-[16px]
+                             sm:font-semibold text-gray-500 text-center leading-snug sm:leading-snug md:leading-normal">
+                Discover handpicked salons, spas, and specialists across the city, and indulge in curated beauty and wellness experiences — your self-care rituals, delivered with precision and grace.
+              </h1>
+
             </div>
 
-            {/* <div className='absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md p-2 md:p-3 lg:p-6 w-full max-w-[90%] rounded-xl flex justify-around items-center z-50'>
-              <div className='flex flex-row'>
-                <div className='p-2'>
-                  <img src={shop} alt="shop" className='h-[30px]' />
-                </div>
-                <div className='flex flex-col text-left'>
-                  <h1 className="text-[18px] sm:text-[24px] font-bold text-[#000000]">5000</h1>
-                  <p className="text-gray-600 text-[10px] sm:text-[14px]">Stores</p>
-                </div>
-              </div>
-
-              <div className='flex flex-row'>
-                <div className='p-2'>
-                  <img src={shop} alt="shop" className='h-[30px]' />
-                </div>
-                <div className='flex flex-col text-left'>
-                  <h1 className="text-[18px] sm:text-[24px] font-bold text-[#000000]">100+</h1>
-                  <p className="text-gray-600 text-[10px] sm:text-[14px]">Cities</p>
-                </div>
-              </div>
-
-              <div className='flex flex-row'>
-                <div className='p-2'>
-                  <img src={shop} alt="shop" className='h-[30px]' />
-                </div>
-                <div className='flex flex-col text-left'>
-                  <h1 className="text-[18px] sm:text-[24px] font-bold text-[#000000]">20,000</h1>
-                  <p className="text-gray-600 text-[10px] sm:text-[14px]">Services</p>
-                </div>
-              </div>
-            </div> */}
 
           </div>
         </div>

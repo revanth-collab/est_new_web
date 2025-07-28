@@ -19,6 +19,7 @@ const Loading = lazy(() => import('./components/Loading/Loading.jsx'));
 const Header = lazy(() => import('./components/Header/Header.jsx'));
 const Contact = lazy(() => import('./pages/Contact1.jsx'));
 const PartnerPage = lazy(() => import('./pages/PartnerPage.jsx'));
+const Home = lazy(() => import('./pages/Home.jsx'));
 
 
 // Protected route wrapper
@@ -52,11 +53,12 @@ const App = () => {
         <Routes>
           {/* Routes WITHOUT Layout */}
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Layout />} />
           <Route path='/contact' element={<PartnerPage />} />
 
           {/* Routes WITH Layout */}
           <Route element={<Layout />}>
+           {/* Public Routes */}
+            <Route path="/" element={<Home />} />
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />

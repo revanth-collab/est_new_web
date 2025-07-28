@@ -131,7 +131,7 @@ const Feedback = () => {
           Real <span className="text-[#6C5DD3]">Feedback</span> From Our{" "}
           <span className="text-[#6C5DD3]">Happy</span> Customers
         </h1>
-        <p className="text-center md:text-left text-[#455151] text-[14px] w-[500px]" >Every review you see here is a real story from a happy customer or a thriving vendor. Their words reflect the ease, trust, and satisfaction that Estetica delivers with every appointment and service experience.</p>
+        <p className="text-center md:text-left text-[#455151] text-[14px] max-w-[500px]" >Every review you see here is a real story from a happy customer or a thriving vendor. Their words reflect the ease, trust, and satisfaction that Estetica delivers with every appointment and service experience.</p>
       </div>
 
       {/* Swiper Carousel */}
