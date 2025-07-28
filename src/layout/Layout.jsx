@@ -58,14 +58,17 @@ const Layout = () => {
 
 
     return (
-        <div className="flex flex-col min-h-screen w-full md:px-4 mx-auto max-w-screen-xl">
+        <> 
             {!shouldHideHeader && <Header />}
+            <div className="flex flex-col min-h-screen">
 
-            <main className="flex-grow w-[100%] md:w-[90%] md:mx-auto px-0 md:px-4 pt-2">
-                <Outlet />
-            </main>
+                <main>
+                    <Outlet />
+                </main>
+                
+            </div>
             <Footer />
-        </div>
+        </>
     );
 };
 

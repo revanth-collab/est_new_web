@@ -62,7 +62,7 @@ const KeyFeatures = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="w-full bg-white py-16 px-6 md:px-10 lg:px-20">
+    <div className="w-full bg-white py-16 px-6 md:px-10 lg:px-20 mx-auto max-w-screen-2xl">
       <div className="flex flex-col lg:flex-row justify-between gap-10">
         <div className="w-full lg:w-1/2 flex justify-center">
           <img

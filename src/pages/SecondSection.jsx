@@ -19,7 +19,7 @@ import image_content from "../assets/images/Image_Content.png";
 
 const SecondSection = () => {
   return (
-    <div className="px-4 pt-16 pb-4 sm:pt-20 sm:pb-4 md:pt-24 md:pb-4 xl:pt-30 flex flex-col justify-center items-center gap-0 text-center">
+    <div className="px-4 pt-16 pb-4 sm:pt-20 sm:pb-4 md:pt-24 md:pb-4 xl:pt-30 flex flex-col justify-center items-center gap-0 text-center w-full mx-auto max-w-screen-xl">
 
       <h1 className="text-black text-[22px] sm:text-[26px] md:text-[32px] font-semibold max-w-[90%] md:max-w-[700px]">
         Your One-Stop Beauty & Wellness Hub

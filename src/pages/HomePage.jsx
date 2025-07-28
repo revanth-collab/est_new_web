@@ -10,9 +10,9 @@ const stats = [
 
 const HomePage = () => {
   return (
-    <div className='container mx-auto px-4  relative flex flex-col md:flex-row justify-center items-center gap-4'>
-      <div className='flex flex-col sm:flex-row items-center'>
-        <div className="md:-mt-4 flex flex-col w-full md:w-1/2 items-center md:items-start gap-4 md:gap-2 lg:gap-3 py-4 sm:py-6 md:py-8 lg:py-10">
+    <div className='container mx-auto px-4  relative flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-screen-xl mb-4'>
+      <div className='flex flex-col sm:flex-row items-center md:px-10'>
+        <div className="md:-mt-4 flex flex-col w-full md:w-3/5 items-center md:items-start gap-4 md:gap-2 lg:gap-3 xl:gap-4 py-4 sm:py-6 md:py-8 lg:py-10 md:ml-5">
 
           <h1 className="text-black font-semibold text-[26px] sm:text-[28px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[50px] leading-[1.2] text-center md:text-left max-w-[90%] md:max-w-[700px] z-10">
             Your <span className="text-[#6C5DD3]">Beauty & Wellness</span> Ecosystem
@@ -50,8 +50,8 @@ const HomePage = () => {
           </a>
         </div> */}
 
-        <div className='w-full md:w-1/2 z-10'>
-          <img src={UpdatedMobileImage} alt="mobileImage" className='w-full max-w-[500px] mx-auto' />
+        <div className='w-full md:w-2/5 z-10'>
+          <img src={UpdatedMobileImage} alt="mobileImage" className='w-full mx-auto' />
         </div>
 
         <div className='absolute bottom-0 flex justify-center items-center md:-bottom-44 lg:-bottom-32 w-full max-w-[90%]'>
@@ -85,7 +85,7 @@ const HomePage = () => {
 
 
             <div className="absolute bottom-0 md:bottom-40 lg:bottom-24 xl:bottom-28 2xl:bottom-20 bg-white shadow-md
-                            w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-7 2xl:py-10
+                             mx-10 px-4 sm:px-6 lg:px-8 py-4 sm:py-4 lg:py-7 2xl:py-10
                             rounded-xl flex justify-around items-center gap-2 md:4 z-50">
               {/* {stats.map((item, idx) => (
                 <div

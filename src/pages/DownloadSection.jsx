@@ -52,46 +52,48 @@ import DownloadImage from "../assets/images/Download_Image.png"
 
 const DownloadSection = () => {
   return (
-    <div className="download-section flex flex-col-reverse md:flex-row justify-center items-center gap-10 px-4 md:px-10 pt-10 pb-6">
-      <div className="w-full md:w-1/2 flex justify-center">
-        <img
-          src={DownloadImage}
-          alt="Download_image"
-          className="w-full max-w-[400px] md:max-w-[430px] mt-6 md:mt-0"
-        />
-      </div>
+    <div className="download-section px-4 md:px-10 pt-10 pb-6">
+      <div className='flex flex-col-reverse md:flex-row justify-center items-center gap-10 w-full mx-auto max-w-screen-xl '>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src={DownloadImage}
+            alt="Download_image"
+            className="w-full max-w-[400px] md:max-w-[430px] mt-6 md:mt-0"
+          />
+        </div>
 
-      <div className="w-full md:w-1/2 max-w-[700px] text-center md:text-left">
-        <h1 className="text-[#000000] text-[30px] sm:text-[40px] md:text-[50px] leading-tight md:leading-[60px] font-semibold mb-4">
-          Download the <span className="text-[#6C5DD3]">esteticanow</span> App
-        </h1>
+        <div className="w-full md:w-1/2 max-w-[700px] text-center md:text-left">
+          <h1 className="text-[#000000] text-[30px] sm:text-[40px] md:text-[50px] leading-tight md:leading-[60px] font-semibold mb-4">
+            Download the <span className="text-[#6C5DD3]">esteticanow</span> App
+          </h1>
 
-        <p className="text-[#A1A2A1] text-[16px] sm:text-[18px] font-medium tracking-wide mb-6">
-          Discover top-rated providers, explore exclusive services, and book appointments effortlessly — all in one place. Estetica makes self-care simple, smart, and accessible.
-        </p>
+          <p className="text-[#A1A2A1] text-[16px] sm:text-[18px] font-medium tracking-wide mb-6">
+            Discover top-rated providers, explore exclusive services, and book appointments effortlessly — all in one place. Estetica makes self-care simple, smart, and accessible.
+          </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
 
-          <img src={userQR} alt="qr_image" className="w-[120px]" />
+            <img src={userQR} alt="qr_image" className="w-[120px]" />
 
 
-          <div className="flex flex-row sm:flex-col gap-2">
-            
-            <a className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]" href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">
-              <BiLogoPlayStore className="text-white size-6" />
-              <div>
-                <p className="text-[10px] text-white tracking-tighter">GET IT ON</p>
-                <p className="text-white text-[14px] font-semibold">Google Play</p>
-              </div>
-            </a>
+            <div className="flex flex-row sm:flex-col gap-2">
+              
+              <a className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]" href="https://play.google.com/store/apps/details?id=com.esteticaapp.user" target="_blank">
+                <BiLogoPlayStore className="text-white size-6" />
+                <div>
+                  <p className="text-[10px] text-white tracking-tighter">GET IT ON</p>
+                  <p className="text-white text-[14px] font-semibold">Google Play</p>
+                </div>
+              </a>
 
-            <a className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]" href="https://apps.apple.com/in/app/estetica/id6739260215" target="_blank">
-              <FaApple className="text-white size-6" />
-              <div>
-                <p className="text-[10px] text-white tracking-tighter">Download on</p>
-                <p className="text-white text-[14px] font-semibold">App Store</p>
-              </div>  
-            </a>
+              <a className="bg-black rounded-xl flex items-center gap-2 p-2 px-4 min-w-[100px]" href="https://apps.apple.com/in/app/estetica/id6739260215" target="_blank">
+                <FaApple className="text-white size-6" />
+                <div>
+                  <p className="text-[10px] text-white tracking-tighter">Download on</p>
+                  <p className="text-white text-[14px] font-semibold">App Store</p>
+                </div>  
+              </a>
+            </div>
           </div>
         </div>
       </div>
