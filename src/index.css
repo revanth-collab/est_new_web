@@ -4,77 +4,86 @@
 @tailwind utilities;
 
 :root {
-    /* --primary:#BFA6FF; */
-    /* --secondary: #ffffff; */
-    --primary: rgba(229, 219, 254, 1);
-    --secondary:rgba(255, 255, 255, 1) ;
-    /* --theme-gradient:linear-gradient(180deg,var(--primary),var(--secondary)); */
-    --theme-gradient:linear-gradient(0deg, white 0%, #E5DBFE 100%);
-    --theme-gradient-right:linear-gradient(90deg,var(--primary),var(--secondary));
-    --theme-gradient-left:linear-gradient(90deg,var(--secondary),var(--primary));
-    --btn-primary:#6C5DD3;
-    --btn-secondary:#BFA6FF;
-    --download-section-primary:rgba(108, 93, 211, 0.1);
-    --downlaod-section-secondary:rgba(108, 93, 211, 0);
-    --download-section-gradient:linear-gradient(90deg, var(--download-section-primary), var(--downlaod-section-secondary));
-    --partner-us-primary:rgba(100, 116, 139, 0.1);
-    --download-section-gradient-reverse:linear-gradient(90deg, var(--downlaod-section-secondary), var(--partner-us-primary));
-    
+  /* --primary:#BFA6FF; */
+  /* --secondary: #ffffff; */
+  --primary: rgba(229, 219, 254, 1);
+  --secondary: rgba(255, 255, 255, 1);
+  /* --theme-gradient:linear-gradient(180deg,var(--primary),var(--secondary)); */
+  --theme-gradient: linear-gradient(0deg, white 0%, #E5DBFE 100%);
+  --theme-gradient-right: linear-gradient(90deg, var(--primary), var(--secondary));
+  --theme-gradient-left: linear-gradient(90deg, var(--secondary), var(--primary));
+  --btn-primary: #6C5DD3;
+  --btn-secondary: #BFA6FF;
+  --download-section-primary: rgba(108, 93, 211, 0.1);
+  --downlaod-section-secondary: rgba(108, 93, 211, 0);
+  --download-section-gradient: linear-gradient(90deg, var(--download-section-primary), var(--downlaod-section-secondary));
+  --partner-us-primary: rgba(100, 116, 139, 0.1);
+  --download-section-gradient-reverse: linear-gradient(90deg, var(--downlaod-section-secondary), var(--partner-us-primary));
+
 }
 
-body{
-    /* background-image: url('/react_001/src/assets/images/bg-image.png'); */
-    background:var(--theme-gradient);
-    background-size: cover;
-    height: 100vh;
-    background-repeat: no-repeat;
-    font-family: 'Lato',sans-serif;
+body {
+  /* background-image: url('/react_001/src/assets/images/bg-image.png'); */
+  background: var(--theme-gradient);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
 }
+
 .primary-btn {
-    /* background:linear-gradient(90deg, var(--btn-secondary), var(--btn-primary),var(--btn-primary)); */
-    background: var(--btn-primary);
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: bold;
-    font-family: 'Lato',sans-serif;
+  /* background:linear-gradient(90deg, var(--btn-secondary), var(--btn-primary),var(--btn-primary)); */
+  background: var(--btn-primary);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
-.primary-btn:hover{
-    background: var(--btn-secondary);
-    border: 1px solid var(--btn-primary);
+
+.primary-btn:hover {
+  background: var(--btn-secondary);
+  border: 1px solid var(--btn-primary);
 }
+
 .secondary-btn {
-    background: transparent;
-    border: 1px solid var(--btn-primary);
-    color:var(--btn-primary);
-    padding: 5px 10px;
-    font-size: 13px;
-    font-weight: bold;
-    font-family: 'Lato',sans-serif;
+  background: transparent;
+  border: 1px solid var(--btn-primary);
+  color: var(--btn-primary);
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
-.secondary-btn:hover{
-    background: var(--btn-primary);
-    color: #ffffff;
+
+.secondary-btn:hover {
+  background: var(--btn-primary);
+  color: #ffffff;
 }
+
 .download-section {
-    background: var(--download-section-gradient);
-    /* min-height: 100vh; */
+  background: var(--download-section-gradient);
+  /* min-height: 100vh; */
 }
+
 .partner-us {
-    background: var(--download-section-gradient-reverse);
+  background: var(--download-section-gradient-reverse);
 }
 
 @media (max-width: 640px) {
+
   .primary-btn,
   .secondary-btn {
     padding: 8px 16px;
     font-size: 12px;
   }
 }
-.primary-color{
-    color: var(--btn-primary);
+
+.primary-color {
+  color: var(--btn-primary);
 }
+
 .contact-us {
-    /* background: linear-gradient(180deg, var(--primary),var(--secondary),#ffffff); */
+  /* background: linear-gradient(180deg, var(--primary),var(--secondary),#ffffff); */
 }
 
 /* global.css or add to tailwind config via @apply */
@@ -99,8 +108,9 @@ input.no-spinner[type="number"] {
   background-color: #0D0C17;
   min-height: 100vh;
 }
+
 .partner-button {
-  background: linear-gradient(90deg,rgba(191, 166, 255, 1),rgba(108, 93, 211, 1));
+  background: linear-gradient(90deg, rgba(191, 166, 255, 1), rgba(108, 93, 211, 1));
 }
 
 @layer utilities {
@@ -108,6 +118,7 @@ input.no-spinner[type="number"] {
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-50%);
     }
@@ -119,6 +130,10 @@ input.no-spinner[type="number"] {
 }
 
 .ad_card {
-  background: linear-gradient(90deg , rgba(108, 93, 211, 0.2), rgba(118, 104, 220, 0.15));
+  background: linear-gradient(90deg, rgba(108, 93, 211, 0.2), rgba(118, 104, 220, 0.15));
   border: 1.5px solid rgba(108, 93, 211, 1);
+}
+
+.login-para {
+  color: #313131;
 }

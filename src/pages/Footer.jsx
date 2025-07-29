@@ -2,6 +2,7 @@ import React from "react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import img from "../assets/images/est_logo.png";
 import { BsDot } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -35,9 +36,9 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-2">Legal</h4>
               <ul className="space-y-1">
-                <li>Terms of Service</li>
-                <li>Privacy Policy</li>
-                <li>Terms of Use</li>
+                <li><Link to='/terms-and-condition' className="cursor-pointer">Terms of Service</Link></li>
+                <li><Link to="privacy-policy" className="cursor-pointer">Privacy Policy</Link></li>
+                <li><Link to="/refund-policy" className="cursor-pointer">Refund Policy</Link></li>
               </ul>
             </div>
             <div>

@@ -20,6 +20,9 @@ const Header = lazy(() => import('./components/Header/Header.jsx'));
 const Contact = lazy(() => import('./pages/Contact1.jsx'));
 const PartnerPage = lazy(() => import('./pages/PartnerPage.jsx'));
 const Home = lazy(() => import('./pages/Home.jsx'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.jsx'))
+const TermsAndCondition = lazy(() => import('./pages/TermsAndCondition.jsx'))
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy.jsx"))
 
 
 // Protected route wrapper
@@ -57,8 +60,11 @@ const App = () => {
 
           {/* Routes WITH Layout */}
           <Route element={<Layout />}>
-           {/* Public Routes */}
+            {/* Public Routes */}
             <Route path="/" element={<Home />} />
+            <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path='/terms-and-condition' element={<TermsAndCondition />} />
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />
