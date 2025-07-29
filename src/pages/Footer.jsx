@@ -30,7 +30,7 @@ const Footer = () => {
               <ul className="space-y-1">
                 <li>For Partners</li>
                 <li>Pricing</li>
-                <li>Support</li>
+                <li><Link to='/account-deletion'>Support</Link></li>
               </ul>
             </div>
             <div>
