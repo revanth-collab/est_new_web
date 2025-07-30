@@ -21,16 +21,16 @@ const Footer = () => {
               <h4 className="font-bold mb-2">About</h4>
               <ul className="space-y-1">
                 <li>Help and Support</li>
-                <li>Careers</li>
+                <li><Link to='/about-us'>About us</Link></li>
                 <li>Blog</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-2">For Business</h4>
               <ul className="space-y-1">
-                <li>For Partners</li>
+                <li><Link to='/contact'>For Partners</Link></li>
                 <li>Pricing</li>
-                <li><Link to='/account-deletion'>Support</Link></li>
+                <li><Link to='/account-deletion'>Account Deletion</Link></li>
               </ul>
             </div>
             <div>
@@ -44,9 +44,9 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-2">Find us on social</h4>
               <ul className="space-y-1">
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>LinkedIn</li>
+                <li><a href="https://www.instagram.com/yourconfidencepartner?igsh=MWhvZ3JhdzlwbDJzZg==" target="_blank" aria-label="Link">Instagram</a></li>
+                <li><a href="https://www.facebook.com/share/18tJsk5yAZ/" target="_blank" aria-label="Link">Facebook</a></li>
+                <li><a href="https://www.linkedin.com/company/esteticanow/" target="_blank" aria-label='Link'>LinkedIn</a></li>
               </ul>
             </div>
           </div>
@@ -56,13 +56,16 @@ const Footer = () => {
         <div className="mt-10 pt-4 border-t text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500">
           <p>© 2025 Esteticanow. All rights reserved.</p>
           <div className="flex gap-4 text-base">
-            <a href="#" aria-label="Instagram">
+            {/* <a href="#" aria-label="Instagram"> */}
+            <a href="https://www.instagram.com/yourconfidencepartner?igsh=MWhvZ3JhdzlwbDJzZg==" target="_blank" aria-label="Link">
               <FaInstagram />
             </a>
-            <a href="#" aria-label="Facebook">
+            {/* <a href="#" aria-label="Facebook"> */}
+            <a href="https://www.facebook.com/share/18tJsk5yAZ/" target="_blank" aria-label="Link">
               <FaFacebookF />
             </a>
-            <a href="#" aria-label="LinkedIn">
+            {/* <a href="#" aria-label="LinkedIn"> */}
+            <a href="https://www.linkedin.com/company/esteticanow/" target="_blank" aria-label='Link'>
               <FaLinkedinIn />
             </a>
           </div>
