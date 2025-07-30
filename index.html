@@ -1,20 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EsteticaNow</title>
 
-    <link rel="preload" as="image" href="/react_001/src/assets/images/Download.png" type="image/png">
-    <link rel="preload" as="image" href="/react_001/src/assets/images/est_logo.png" type="image/png">
-    <link rel="preload" as="image" href="/react_001/src/assets/images/feedback.png" type="image/png">
-    <link rel="preload" as="image" href="/react_001/src/assets/images/Image_Content.png" type="image/png">
-    <link rel="preload" as="image" href="/react_001/src/assets/images/mobileImage.png" type="image/png">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EsteticaNow</title>
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <link rel="preload" as="image" href="/react_001/src/assets/images/Download.png" type="image/png">
+  <link rel="preload" as="image" href="/react_001/src/assets/images/est_logo.png" type="image/png">
+  <link rel="preload" as="image" href="/react_001/src/assets/images/feedback.png" type="image/png">
+  <link rel="preload" as="image" href="/react_001/src/assets/images/Image_Content.png" type="image/png">
+  <link rel="preload" as="image" href="/react_001/src/assets/images/mobileImage.png" type="image/png">
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1243268146858067',
+        xfbml: true,
+        version: 'v23.0'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+
 </html>

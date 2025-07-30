@@ -10,30 +10,31 @@ const stats = [
 
 const HomePage = () => {
   return (
-    <div className='container mx-auto px-4  relative flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-screen-xl mb-4'>
-      <div className='flex flex-col sm:flex-row items-center md:px-10'>
-        <div className="md:-mt-4 flex flex-col w-full md:w-3/5 items-center md:items-start gap-4 md:gap-2 lg:gap-3 xl:gap-4 py-4 sm:py-6 md:py-8 lg:py-10 md:ml-5">
+    <div className='lg:min-h-[80vh] flex justify-center items-center '>
+      <div className='container mx-auto px-4  relative flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-screen-xl lg:p-4 mb-4'>
+        <div className='flex flex-col sm:flex-row items-center md:px-10'>
+          <div className="md:-mt-4 flex flex-col w-full md:w-3/5 items-center md:items-start gap-4 md:gap-2 lg:gap-3 xl:gap-4 py-4 sm:py-6 md:py-8 lg:py-10 md:ml-5">
 
-          <h1 className="text-black font-semibold text-[26px] sm:text-[28px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[50px] leading-[1.2] text-center md:text-left max-w-[90%] md:max-w-[700px] z-10">
-            Your <span className="text-[#6C5DD3]">Beauty & Wellness</span> Ecosystem
-          </h1>
+            <h1 className="text-black font-semibold text-[26px] sm:text-[28px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[50px] leading-[1.2] text-center md:text-left max-w-[90%] md:max-w-[700px] z-10">
+              Your <span className="text-[#6C5DD3]">Beauty & Wellness</span> Ecosystem
+            </h1>
 
-          <p className="text-[#64748B] text-[14px] sm:text-[16px] md:text-[14px] lg:text-[18px] xl:text-[19px] leading-snug md:leading-normal text-center md:text-left max-w-[90%] md:max-w-[600px] z-10">
-            Discover top-rated salons, spas & clinics. Book instantly.
-          </p>
+            <p className="text-[#64748B] text-[14px] sm:text-[16px] md:text-[14px] lg:text-[18px] xl:text-[19px] leading-snug md:leading-normal text-center md:text-left max-w-[90%] md:max-w-[600px] z-10">
+              Discover top-rated salons, spas & clinics. Book instantly.
+            </p>
 
-          <a
-            href="https://play.google.com/store/apps/details?id=com.esteticaapp.user"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#6C5DD3] text-white font-semibold text-[14px] sm:text-[16px] px-6 py-2 rounded-full mb-2 z-10 hover:bg-[#5947c5] transition duration-200"
-          >
-            Get the App
-          </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.esteticaapp.user"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#6C5DD3] text-white font-semibold text-[14px] sm:text-[16px] px-6 py-2 rounded-full mb-2 z-10 hover:bg-[#5947c5] transition duration-200"
+            >
+              Get the App
+            </a>
 
-        </div>
+          </div>
 
-        {/* <div className="flex flex-col items-start text-center md:text-left w-full md:w-1/2 gap-4 z-10">
+          {/* <div className="flex flex-col items-start text-center md:text-left w-full md:w-1/2 gap-4 z-10">
           <h1 className="text-black text-[28px] sm:text-[36px] lg:text-[56px] font-semibold leading-tight">
             Your <span className="text-[#6C5DD3]">Beauty & Wellness</span> Ecosystem
           </h1>
@@ -50,19 +51,19 @@ const HomePage = () => {
           </a>
         </div> */}
 
-        <div className='w-full md:w-2/5 z-10'>
-          <img src={UpdatedMobileImage} alt="mobileImage" className='w-full mx-auto' />
-        </div>
+          <div className='w-full md:w-2/5 z-10'>
+            <img src={UpdatedMobileImage} alt="mobileImage" className='w-full mx-auto' />
+          </div>
 
-        <div className='absolute bottom-0 flex justify-center items-center md:-bottom-44 lg:-bottom-32 w-full max-w-[90%]'>
-          <div className='relative flex justify-center items-center w-full'>
-            <h1 className="w-full text-[100px] sm:text-[160px] md:text-[180px] lg:text-[300px] font-bold bg-gradient-to-b from-[#6C5DD3] to-white bg-clip-text text-transparent -z-40 select-none opacity-[0.10]">
-              Estetica
-            </h1>
+          <div className='absolute bottom-0 flex justify-center items-center md:-bottom-44 lg:-bottom-32 w-full max-w-[90%]'>
+            <div className='relative flex justify-center items-center w-full'>
+              <h1 className="w-full text-[100px] sm:text-[160px] md:text-[180px] lg:text-[300px] font-bold bg-gradient-to-b from-[#6C5DD3] to-white bg-clip-text text-transparent -z-40 select-none opacity-[0.10]">
+                Estetica
+              </h1>
 
-            
 
-            {/* <div className="absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md 
+
+              {/* <div className="absolute bottom-0 md:bottom-36 lg:bottom-28 bg-white shadow-md 
                             px-3 py-4 sm:px-6 sm:py-3 lg:py-5 2xl:py-7 w-full max-w-[90%] mx-auto rounded-xl 
                             flex flex-wrap justify-around items-center gap-y-4 z-50">
               {stats.map((item, idx) => (
@@ -84,10 +85,10 @@ const HomePage = () => {
             </div> */}
 
 
-            <div className="absolute bottom-0 md:bottom-40 lg:bottom-24 xl:bottom-28 2xl:bottom-20 bg-white shadow-md
+              <div className="absolute bottom-0 md:bottom-40 lg:bottom-24 xl:bottom-28 2xl:bottom-20 bg-white shadow-md
                              mx-10 px-4 sm:px-6 lg:px-8 py-4 sm:py-4 lg:py-7 2xl:py-10
                             rounded-xl flex justify-around items-center gap-2 md:4 z-50">
-              {/* {stats.map((item, idx) => (
+                {/* {stats.map((item, idx) => (
                 <div
                   key={idx}
                   className="flex items-center gap-2 sm:gap-3 justify-center min-w-[100px] sm:min-w-[140px]"
@@ -110,14 +111,15 @@ const HomePage = () => {
                 </div>
               ))} */}
 
-              <h1 className="text-[10px] sm:text-[20px] md:text-[12px] lg:text-[16px]
+                <h1 className="text-[10px] sm:text-[20px] md:text-[12px] lg:text-[16px]
                              sm:font-semibold text-gray-500 text-center leading-snug sm:leading-snug md:leading-normal">
-                Discover handpicked salons, spas, and specialists across the city, and indulge in curated beauty and wellness experiences — your self-care rituals, delivered with precision and grace.
-              </h1>
+                  Discover handpicked salons, spas, and specialists across the city, and indulge in curated beauty and wellness experiences — your self-care rituals, delivered with precision and grace.
+                </h1>
+
+              </div>
+
 
             </div>
-
-
           </div>
         </div>
       </div>

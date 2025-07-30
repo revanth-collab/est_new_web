@@ -25,6 +25,9 @@ const TermsAndCondition = lazy(() => import('./pages/TermsAndCondition.jsx'))
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy.jsx"))
 const AccountDeletion = lazy(() => import('./pages/AccountDeletion.jsx'))
 
+const RegisterStore = lazy(() => import("./pages/RegisterStore.jsx"))
+const AboutUsSection = lazy(() => import('./pages/AboutUsSection.jsx'))
+
 
 // Protected route wrapper
 const ProtectedRoute = () => {
@@ -58,6 +61,7 @@ const App = () => {
           {/* Routes WITHOUT Layout */}
           <Route path="/login" element={<Login />} />
           <Route path='/contact' element={<PartnerPage />} />
+          <Route path='/registerstore' element={<RegisterStore />} />
 
           {/* Routes WITH Layout */}
           <Route element={<Layout />}>
@@ -67,6 +71,7 @@ const App = () => {
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path='/terms-and-condition' element={<TermsAndCondition />} />
             <Route path='/account-deletion' element={<AccountDeletion />} />
+            <Route path='/about-us' element={<AboutUsSection />} />
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />

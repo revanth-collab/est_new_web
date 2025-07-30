@@ -137,3 +137,7 @@ input.no-spinner[type="number"] {
 .login-para {
   color: #313131;
 }
+
+.btn {
+  background: linear-gradient(90deg, var(--btn-secondary), var(--btn-primary), var(--btn-primary));
+}
