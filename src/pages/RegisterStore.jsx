@@ -1,12 +1,16 @@
 import React, { useState, useRef } from "react";
 import MultiSelectDropdown from "./MultiSelectDropdown";
+import { useNavigate } from "react-router-dom";
 
 const RegisterStore = () => {
+    const navigate = useNavigate()
     const [storeType, setStoreType] = useState("Single Outlet");
     const [brandOwner, setBrandOwner] = useState(false);
     const Services = ['Clinic', 'Spa', 'Salon']
+    const software = ['CRM', 'Mobile Application']
 
     const [selectedServices, setSelectedServices] = useState([]);
+    const [selectedSoftware, setSelectedSoftware] = useState([]);
 
     const fileInputRef = useRef(null);
     const [fileName, setFileName] = useState("");
@@ -82,6 +86,13 @@ const RegisterStore = () => {
                         </div>
                     </div>
 
+                    <div>
+                        <label className="text-sm font-medium text-gray-700">Select Software Type<span className="text-red-500">*</span></label>
+                        <div className="mt-1 w-full border border-gray-300 rounded-xl px-4 focus:outline-none focus:ring-2 focus:ring-purple-300">
+                            <MultiSelectDropdown options={software} placeholder="Select Software Types" selectedValues={selectedSoftware} setSelectedValues={setSelectedSoftware} />
+                        </div>
+                    </div>
+
                     {/* Brand Name */}
                     <div>
                         <label className="text-sm font-medium text-gray-700">Brand Name<span className="text-red-500">*</span></label>
@@ -146,6 +157,7 @@ const RegisterStore = () => {
                     <button
                         type="submit"
                         className="bg-gradient-to-r from-purple-500 to-purple-300 text-white font-medium px-6 py-3 rounded-xl shadow-md hover:from-purple-600 hover:to-purple-400"
+                        onClick={() => navigate('/under-process')}
                     >
                         Register your store
                     </button>

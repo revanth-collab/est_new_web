@@ -2,14 +2,14 @@ import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    const [email, setEmail] = useState('')
+    const [number, setNumber] = useState('')
     const [password, setPassword] = useState('')
     const [errmsg, setErrMsg] = useState('')
     const [error, setError] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(email);
+        console.log(number);
         console.log(password);
     }
 
@@ -20,20 +20,20 @@ const Login = () => {
                 <h1 className='font-semibold text-[24px]'>Login</h1>
                 <p className='login-para font-medium text-[12px]'>Login to access your travelwise  account</p>
                 <div className='flex flex-col gap-2 mt-4 w-full'>
-                    <label htmlFor='username' className='text-[#64748B] text-xs font-medium'>User name</label>
+                    <label htmlFor='username' className='text-[#64748B] text-xs font-medium'>Mobile Number</label>
                     <input
-                        type="email"
-                        id="username"
-                        value={email}
-                        placeholder="Enter the Username"
+                        type="number"
+                        id="number"
+                        value={number}
+                        placeholder="Enter the Number"
                         className="p-2 border-[2px] border-[#D3DDEC] rounded-md outline-none"
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => setNumber(e.target.value)}
                     />
                 </div>
                 <div className='flex flex-col gap-2 mt-4 w-full'>
                     <label htmlFor='password' className='text-[#64748B] text-xs font-medium'>Password</label>
                     <input
-                        type="email"
+                        type="password"
                         id="password"
                         value={password}
                         placeholder="Enter the Password"
@@ -47,7 +47,7 @@ const Login = () => {
                     <p className="text-[14px]">
                         Don't have an account?{" "}
                         <Link
-                            to="/signup"
+                            to="/registerstore"
                             className="primary-color font-bold cursor-pointer hover:underline underline-offset-2"
                         >
                             Sign Up

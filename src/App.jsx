@@ -24,10 +24,10 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.jsx'))
 const TermsAndCondition = lazy(() => import('./pages/TermsAndCondition.jsx'))
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy.jsx"))
 const AccountDeletion = lazy(() => import('./pages/AccountDeletion.jsx'))
-
 const RegisterStore = lazy(() => import("./pages/RegisterStore.jsx"))
+const UnderProcess = lazy(() => import('./pages/UnderProcess.jsx'))
 const AboutUsSection = lazy(() => import('./pages/AboutUsSection.jsx'))
-
+const RegisterStorePage = lazy(() => import('./pages/RegisterStorePage.jsx'))
 
 // Protected route wrapper
 const ProtectedRoute = () => {
@@ -61,7 +61,9 @@ const App = () => {
           {/* Routes WITHOUT Layout */}
           <Route path="/login" element={<Login />} />
           <Route path='/contact' element={<PartnerPage />} />
-          <Route path='/registerstore' element={<RegisterStore />} />
+          <Route path='/signup' element={<RegisterStore />} />
+          <Route path='/under-process' element={<UnderProcess />} />
+          <Route path='/registerstore' element={<RegisterStorePage />} />
 
           {/* Routes WITH Layout */}
           <Route element={<Layout />}>

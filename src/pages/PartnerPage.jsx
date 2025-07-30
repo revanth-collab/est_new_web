@@ -40,7 +40,7 @@ const PartnerPage = () => {
           <div className="absolute bottom-0 left-0 w-full h-1/2 z-[-1] bg-white" />
           <img
             src={UpdateDashboardImg}
-            alt="dummyImage"
+            alt="DashboardImage"
             className="w-full max-w-[900px] h-auto"
           />
         </div>
