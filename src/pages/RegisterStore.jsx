@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 const RegisterStore = () => {
     const navigate = useNavigate()
+    const [fullname, setFullName] = useState('')
+    const [contactNumber, setContactNumber] = useState('')
+    const [email, setEmail] = useState('')
+    const [brandName, setBrandName] = useState('')
+    const [outletCount, setOutletCount] = useState('')
     const [storeType, setStoreType] = useState("Single Outlet");
     const [brandOwner, setBrandOwner] = useState(false);
     const Services = ['Clinic', 'Spa', 'Salon']
@@ -37,22 +42,25 @@ const RegisterStore = () => {
                     {/* Full Name */}
                     <div>
                         <label className="text-sm font-medium text-gray-700">Your Full Name<span className="text-red-500">*</span></label>
-                        <input type="text" placeholder="Fullname"
+                        <input type="text" placeholder="Fullname" value={fullname}
                             className="mt-1 w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300"
+                            onChange={(e) => setFullName(e.target.value)}
                         />
                     </div>
 
                     <div>
                         <label className="text-sm font-medium text-gray-700">Email<span className="text-red-500">*</span></label>
-                        <input type="email" placeholder="Email"
+                        <input type="email" placeholder="Email" value={email}
                             className="mt-1 w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300"
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
 
                     <div>
                         <label className="text-sm font-medium text-gray-700">Contact Number<span className="text-red-500">*</span></label>
-                        <input type="text" placeholder="Contact Number"
+                        <input type="text" placeholder="Contact Number" value={contactNumber}
                             className="mt-1 w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300"
+                            onChange={(e) => setContactNumber(e.target.value)}
                         />
                     </div>
 
@@ -74,7 +82,9 @@ const RegisterStore = () => {
                             <input
                                 type="number"
                                 placeholder="Enter the outlets count"
+                                value={outletCount}
                                 className="mt-1 w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300"
+                                onChange={(e) => setOutletCount(e.target.value)}
                             />
                         </div>
                     )}
@@ -98,8 +108,10 @@ const RegisterStore = () => {
                         <label className="text-sm font-medium text-gray-700">Brand Name<span className="text-red-500">*</span></label>
                         <input
                             type="text"
+                            value={brandName}
                             placeholder="Enter the Brand Name"
                             className="mt-1 w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300"
+                            onChange={(e) => setBrandName(e.target.value)}
                         />
                     </div>
 
@@ -157,7 +169,12 @@ const RegisterStore = () => {
                     <button
                         type="submit"
                         className="bg-gradient-to-r from-purple-500 to-purple-300 text-white font-medium px-6 py-3 rounded-xl shadow-md hover:from-purple-600 hover:to-purple-400"
-                        onClick={() => navigate('/under-process')}
+                        onClick={() => navigate('/otp-verification', {
+                            state: {
+                                phone: contactNumber,
+                                email: email
+                            }
+                        })}
                     >
                         Register your store
                     </button>

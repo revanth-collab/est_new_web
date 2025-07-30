@@ -8,7 +8,7 @@ const BasicDetails = () => {
     const [gender, setGender] = useState("");
 
     return (
-        <div className="w-full h-full flex flex-col bg-white rounded-2xl p-6">
+        <div className="w-full h-full flex flex-col justify-between bg-white rounded-2xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Full Name */}
                 <div className="flex flex-col gap-1">
@@ -86,7 +86,7 @@ const BasicDetails = () => {
 
             {/* Next Button */}
             <div className="flex justify-end mt-8">
-                <button className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-6 py-2 rounded-full shadow hover:opacity-90 transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-400 to-purple-600 text-white px-6 py-2 rounded-xl min-w-[200px] shadow hover:opacity-90 transition-all duration-300">
                     Next &gt;&gt;
                 </button>
             </div>

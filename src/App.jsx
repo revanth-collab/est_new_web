@@ -28,6 +28,8 @@ const RegisterStore = lazy(() => import("./pages/RegisterStore.jsx"))
 const UnderProcess = lazy(() => import('./pages/UnderProcess.jsx'))
 const AboutUsSection = lazy(() => import('./pages/AboutUsSection.jsx'))
 const RegisterStorePage = lazy(() => import('./pages/RegisterStorePage.jsx'))
+const OtpVerification = lazy(() => import('./pages/OtpVerification.jsx'))
+const OtpPage = lazy(() => import('./pages/OtpPage.jsx'))
 
 // Protected route wrapper
 const ProtectedRoute = () => {
@@ -64,6 +66,8 @@ const App = () => {
           <Route path='/signup' element={<RegisterStore />} />
           <Route path='/under-process' element={<UnderProcess />} />
           <Route path='/registerstore' element={<RegisterStorePage />} />
+          <Route path='/otp-verification' element={<OtpVerification />} />
+          <Route path='/otp' element={<OtpPage />} />
 
           {/* Routes WITH Layout */}
           <Route element={<Layout />}>

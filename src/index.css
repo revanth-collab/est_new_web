@@ -141,3 +141,11 @@ input.no-spinner[type="number"] {
 .btn {
   background: linear-gradient(90deg, var(--btn-secondary), var(--btn-primary), var(--btn-primary));
 }
+
+.label {
+  color: #64748B;
+}
+
+.text {
+  color: #1A1A1A;
+}

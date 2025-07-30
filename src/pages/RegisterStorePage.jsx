@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import RightSideComponent from "../components/RightSideComponent/RightSideComponent"
 import logoImage from "../assets/images/est_logo.png"; // replace with correct path
+import LogoutHeader from "../components/Header/LogoutHeader";
+import ProgressCircle from "../components/RightSideComponent/ProgressCircle";
 
 import { CiImageOn } from "react-icons/ci";
 import { TiBusinessCard, TiDatabase } from "react-icons/ti";
@@ -69,29 +71,44 @@ const RegisterStorePage = () => {
         //         <RightSideComponent value={activeField} />
         //     </div>
         // </div>
-        <div className="min-h-screen grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 p-8 bg-gray-100">
-            {/* Sidebar - fixed width */}
-            <div className="bg-white rounded-2xl shadow-xl py-8 px-4">
-                {leftSideBar.map((each) => (
-                    <div
-                        key={each.id}
-                        className={`flex items-center gap-2 p-3 rounded-lg cursor-pointer hover:bg-gray-100 ${activeField === each.id
-                            ? "text-[#6C5DD3] font-semibold bg-gray-100"
-                            : "text-[#777777]"
-                            }`}
-                        onClick={() => setActiveField(each.id)}
-                    >
-                        <span>{each.img}</span>
-                        <span>{each.title}</span>
+        <>
+            <LogoutHeader />
+            <div className="flex flex-wrap items-center justify-between mx-auto max-w-screen-2xl px-5 py-2">
+                <div className="w-full min-h-screen flex flex-col gap-6 px-8 py-7">
+                    <div className="flex flex-row justify-between gap-3 items-center">
+                        <div>
+                            <h1 className="text-[#313131] text-2xl font-semibold">Register your store</h1>
+                            <p className="label text-xs">Create your account to access your Esteticanow partner</p>
+                        </div>
+                        <div className="flex justify-end pr-6">
+                            <ProgressCircle percentage={Math.round((activeField - 1) / (leftSideBar.length - 1) * 100)} />
+                        </div>
                     </div>
-                ))}
-            </div>
+                    <div className="min-h-[78vh] grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
+                        <div className="bg-white rounded-2xl shadow-xl py-8 px-4">
+                            {leftSideBar.map((each) => (
+                                <div
+                                    key={each.id}
+                                    className={`flex items-center gap-2 p-3 rounded-lg cursor-pointer hover:bg-gray-100 ${activeField === each.id
+                                        ? "text-[#6C5DD3] font-semibold bg-gray-100"
+                                        : "text-[#777777]"
+                                        }`}
+                                    onClick={() => setActiveField(each.id)}
+                                >
+                                    <span>{each.img}</span>
+                                    <span>{each.title}</span>
+                                </div>
+                            ))}
+                        </div>
 
-            {/* Right Side Content */}
-            <div className="flex flex-col justify-center w-full h-full">
-                <RightSideComponent value={activeField} />
+                        {/* Right Side Content */}
+                        <div className="flex flex-col justify-center w-full h-full">
+                            <RightSideComponent value={activeField} />
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
