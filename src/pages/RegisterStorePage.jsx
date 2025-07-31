@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RightSideComponent from "../components/RightSideComponent/RightSideComponent"
 import logoImage from "../assets/images/est_logo.png"; // replace with correct path
 import LogoutHeader from "../components/Header/LogoutHeader";
@@ -49,28 +49,17 @@ const leftSideBar = [
 ]
 
 const RegisterStorePage = () => {
-    const [activeField, setActiveField] = useState(1)
+    // const [activeField, setActiveField] = useState(1)
+    const [activeField, setActiveField] = useState(
+        parseInt(localStorage.getItem("activeField") || "1")
+    );
+
+    useEffect(() => {
+        localStorage.setItem("activeField", activeField);
+    }, [activeField]);
 
 
     return (
-        // <div className="min-h-screen grid md:grid-cols-2 gap-4 p-8 bg-gray-100">
-        //     {/* LEFT SIDE - Info / Image */}
-        //     <div className="w-full md:w-2/5 flex flex-col bg-white rounded-2xl shadow-xl py-8 px-3">
-        //         {leftSideBar.map((each) => (
-        //             <div key={each.id}
-        //                 className={`flex items-center gap-2 p-3 rounded-lg cursor-pointer hover:bg-gray-100 ${activeField === each.id ? "text-[#6C5DD3] font-semibold bg-gray-100" : "text-[#777777]"}`}
-        //                 onClick={() => setActiveField(each.id)}
-        //             >
-        //                 <span>{each.img}</span>
-        //                 <span>{each.title}</span>
-        //             </div>
-        //         ))}
-        //     </div>
-
-        //     <div className="w-full md:w-3/5 flex flex-col justify-center items-center">
-        //         <RightSideComponent value={activeField} />
-        //     </div>
-        // </div>
         <>
             <LogoutHeader />
             <div className="flex flex-wrap items-center justify-between mx-auto max-w-screen-2xl px-5 py-2">
@@ -93,7 +82,7 @@ const RegisterStorePage = () => {
                                         ? "text-[#6C5DD3] font-semibold bg-gray-100"
                                         : "text-[#777777]"
                                         }`}
-                                    onClick={() => setActiveField(each.id)}
+                                    onClick={() => { setActiveField(each.id) }}
                                 >
                                     <span>{each.img}</span>
                                     <span>{each.title}</span>

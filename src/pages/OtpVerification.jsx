@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const OtpVerification = () => {
+    const navigate = useNavigate();
     const location = useLocation();
     const { phone, email } = location.state || {};
 
@@ -63,7 +64,27 @@ const OtpVerification = () => {
         const emailCode = emailOtp.join('');
         console.log('Phone OTP:', phoneCode);
         console.log('Email OTP:', emailCode);
+        // handlePhoneNumberVerification()
+        // handleEmailVerification()
+        navigate('/under-process')
     };
+
+    const handlePhoneNumberVerification = async () => {
+        const formData = new FormData()
+        formData.append(phone)
+        formData.append(phoneOtp)
+        const response = await fetch('/phone-number', formData)
+        const data = await response.json()
+        console.log(data)
+    }
+    const handleEmailVerification = async () => {
+        const formData = new FormData()
+        formData.append(email);
+        formData.append(emailOtp)
+        const response = await fetch('/email-verify', formData)
+        const data = await response.json()
+        console.log(data)
+    }
 
     const renderOtpInputs = (otpArray, setOtp, refs) => (
         <div className="flex space-x-2 justify-center">
